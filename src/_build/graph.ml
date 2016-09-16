@@ -109,8 +109,47 @@ let saveGraph ?filename:(filename="graph.json") g =
   Out_channel.close file
 ;;
 
-(* Crée un graphe de 10000 noeuds aléatoirement et le sauvegarde. *)
+let node_of_json json =
+  let open Yojson.Basic.Util in
+  let team = json |> member "team" |> to_string |> team_of_string in
+  let id = json |> member "id" |> to_int in
+  let link = json |> member "link" |> to_list |> List.map ~f:(fun x -> x |> to_int) in
+  {team=team;id=id;link=link}
+;;
+
+
+let loadGraph ?filename:(filename="graph.json") =
+  let json = Yojson.Basic.from_file filename in
+  let open Yojson.Basic.Util in
+  let entry = json |> member "entry" |> to_int in
+  let size = json |> member "size" |> to_int in
+  let nodes = json |> member "nodes" |> to_list |> List.map ~f:node_of_json |> Array.of_list in
+  {entry=entry;nodes=nodes;size=size}
+;;
+
+
+let isConnex g =
+  let states = Array.create g.size false in
+  let rec loop s = if List.is_empty s then () else
+    let q = Queue.create () in
+    List.iter ~f:(fun x -> if not states.(x) then begin
+      states.(x) <- true;
+      List.iter ~f:(fun x -> Queue.enqueue q x) g.nodes.(x).link
+    end;
+    ) s;
+    loop (Queue.to_list q)
+  in
+  loop [g.entry];
+  for i = 0 to (g.size - 1) do
+    print_string (string_of_bool states.(i))
+  done;
+  print_newline ();
+  not (Array.fold ~init:false ~f:(||) states)
+;;
+
+
 let () =
-  let g = gen_graph 5 3 in
-  saveGraph g
+  let g = loadGraph ~filename:"graph.json" in
+  print_string (string_of_bool (isConnex g));
+  saveGraph ~filename:"graph2.json" g
 ;;

@@ -4,6 +4,10 @@ ocamlfind ocamldep -package yojson -package core -ppx 'ppx-jane -as-ppx' -module
 # Target: graph.cmo, tags: { bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:graph.cmo, file:graph.ml, implem, ocaml, package(core), package(yojson), ppx(ppx-jane -as-ppx), quiet, short_paths, thread }
 ocamlfind ocamlc -c -w A-4-33-40-41-42-43-34-44 -strict-sequence -g -bin-annot -short-paths -thread -package yojson -package core -ppx 'ppx-jane -as-ppx' -o graph.cmo graph.ml
 + ocamlfind ocamlc -c -w A-4-33-40-41-42-43-34-44 -strict-sequence -g -bin-annot -short-paths -thread -package yojson -package core -ppx 'ppx-jane -as-ppx' -o graph.cmo graph.ml
+File "graph.ml", line 121, characters 14-361:
+Warning 16: this optional argument cannot be erased.
+File "graph.ml", line 132, characters 15-27:
+Warning 6: labels were omitted in the application of this function.
 File "graph.ml", line 17, characters 36-37:
 Warning 27: unused variable x.
 File "graph.ml", line 31, characters 4-50:
@@ -11,6 +15,10 @@ Warning 35: unused for-loop index j.
 # Target: graph.cmx, tags: { bin_annot, compile, debug, extension:cmx, extension:ml, file:graph.cmx, file:graph.ml, implem, native, ocaml, package(core), package(yojson), ppx(ppx-jane -as-ppx), quiet, short_paths, thread }
 ocamlfind ocamlopt -c -w A-4-33-40-41-42-43-34-44 -strict-sequence -g -bin-annot -short-paths -thread -package yojson -package core -ppx 'ppx-jane -as-ppx' -o graph.cmx graph.ml
 + ocamlfind ocamlopt -c -w A-4-33-40-41-42-43-34-44 -strict-sequence -g -bin-annot -short-paths -thread -package yojson -package core -ppx 'ppx-jane -as-ppx' -o graph.cmx graph.ml
+File "graph.ml", line 121, characters 14-361:
+Warning 16: this optional argument cannot be erased.
+File "graph.ml", line 132, characters 15-27:
+Warning 6: labels were omitted in the application of this function.
 File "graph.ml", line 17, characters 36-37:
 Warning 27: unused variable x.
 File "graph.ml", line 31, characters 4-50:
