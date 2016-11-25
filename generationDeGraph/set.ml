@@ -3,16 +3,16 @@ type 'a tree =
 	| Node2 of 'a * 'a tree * 'a tree
 	| Node3 of 'a * 'a * 'a tree * 'a tree * 'a tree
 ;;
-
+type 'a set = 'a tree;;
 let make () = Nil;; 
 
-let rec find tree e = match tree with
+let rec mem tree e = match tree with
 	| Nil -> false
-	| Node2(v,l,_) when v > e -> find l e
-	| Node2(v,_,r) when v < e -> find r e
-	| Node3(vl,_,l,_,_) when vl > e -> find l e 
-	| Node3(vl,vr,_,m,_) when (vl < e) && (vr > e) -> find m e
-	| Node3(_,vr,_,_,r) when vr < e -> find r e
+	| Node2(v,l,_) when v > e -> mem l e
+	| Node2(v,_,r) when v < e -> mem r e
+	| Node3(vl,_,l,_,_) when vl > e -> mem l e 
+	| Node3(vl,vr,_,m,_) when (vl < e) && (vr > e) -> mem m e
+	| Node3(_,vr,_,_,r) when vr < e -> mem r e
 	| _ -> true
 ;;
 
