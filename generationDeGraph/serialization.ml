@@ -29,5 +29,6 @@ let load_graph ?filename:(filename="graph.json") =
   json |> to_list |> List.map ~f:graph_element_of_json |> Array.of_list
 ;;
 
-let g = Graph.create_random_network 1000 10 in
+let () =
+let g = Graph.wattsStrogatz 20 5 0.7 in
 save_graph g;;

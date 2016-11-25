@@ -1,7 +1,7 @@
 import json
 import graphviz as gv
 
-g = gv.Graph(format="svg")
+g = gv.Graph(format="png")
 j = []
 with open("graph.json", "r") as f:
     j = json.load(f)

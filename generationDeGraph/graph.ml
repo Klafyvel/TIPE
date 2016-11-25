@@ -1,3 +1,4 @@
+open Core.Std;;
 type graph_element = {id:int;mutable link:int list;degree: int ref};;
 
 let make_empty_node ()= {id=0;link=[];degree=ref 0};;
@@ -18,47 +19,41 @@ let are_linked e1 e2 =
 	loop e1.link
 ;;
 
-
 type graph = graph_element array;;
-
 (* Creates a graph with s nodes. Each node has an unique id and is unconnected. *)
 let make s = Array.init s (fun x -> {id=x;link=[];degree=ref 0});;
 
-
-Random.self_init();;
-let random_but_not i j k n =
-	let l = ref (Random.int n) in
-	while !l=i || !l=j || !l=k do
-		l := Random.int n
-	done;
-	!l
-;;
-
-(* Creates a random network with s nodes.
-The graph will be connexe with a maximal degree = max_degree +- 2.
-*)
-let create_random_network s max_degree = 
-	let g = make s in
-	let prq = Heap.make (s+1) 0 in
-	Heap.insert prq 0 0;
-	Heap.insert prq 1 0;
-	Heap.insert prq 2 0;
-	for l = 3 to (s-1) do
-	(*
-	while (Heap.size prq) >= 3 do*)
-		let i = Heap.pop prq in
-		let j = Heap.pop prq in
-		let k = Heap.pop prq in
-		if degree g.(l) < max_degree then
-		begin
-			add_link g.(i) l;add_link g.(l) i;
-			add_link g.(j) l;add_link g.(l) j;
-			add_link g.(k) l;add_link g.(l) k;
-		end;
-		if degree g.(i) < max_degree then Heap.insert prq i (degree g.(i));
-		if degree g.(j) < max_degree then Heap.insert prq j (degree g.(j));
-		if degree g.(k) < max_degree then Heap.insert prq k (degree g.(k));
-		if degree g.(l) < max_degree then Heap.insert prq l (degree g.(l));
+(* Creates a graph from a matrix. *)
+let graph_of_matrix m =
+	let n = Array.length m in
+	let g = make n in
+	for i = 0 to n-1 do
+		for j = 0 to n-1 do
+			if m.(i).(j) then add_link g.(i) j
+		done
 	done;
 	g
+;;
+
+(* Builds a random graph with the Watts and Strogatz method.
+*)
+let wattsStrogatz n k beta =
+	let l = Array.init n 
+	(fun i -> Array.init n (fun j -> if (j<i-k/2)||(j=i)||j>(i+k/2) then false else true)) in
+	let wire i j = l.(i).(j) <- true;l.(j).(i) <- true in
+	let unwire i j = l.(i).(j) <- false;l.(j).(i) <- false in
+	let wired i j = l.(i).(j) in
+	for i = 0 to n-2 do
+		for j = i+1 to min (i+k/2) n-1 do
+			let r = Random.float 1.0 in
+			if r < beta then begin
+				let k = ref (Random.int n) in
+				while (wired i !k) || (!k = i) do
+					k := Random.int n
+				done;
+				unwire i j;wire i !k
+			end
+		done;
+	done;
+	graph_of_matrix l
 ;;
