@@ -1,6 +1,6 @@
 type 'a priority_queue_element = {priority:int; element:'a};;
 
-type 'a priority_queue = {size:int ref; queue:'a priority_queue_element array};;
+type 'a priority_queue = {size:int ref; mutable queue:'a priority_queue_element array};;
 
 let swap t i j = 
 	let tmp = t.(i) in
@@ -9,7 +9,7 @@ let swap t i j =
 ;;
 
 let make s e = 
-	let t = Array.make s {priority=0;element=e} in
+	let t = Array.make (s+1) {priority=0;element=e} in
 	{size=ref 0;queue=t}
 ;;
 
@@ -27,9 +27,16 @@ let empty q = q.size:=0;;
 let is_empty q = !(q.size)=0;;
 let priority q i = q.queue.(i).priority;;
 
-let insert q e p =
-	let t = q.queue in
+let enlarge s q =
 	let size = size q in
+	let t = Array.init s (fun i -> if i>size then q.queue.(0) else q.queue.(i)) in
+	q.queue <- t
+;;
+
+let insert q e p =
+	let size = size q in
+	if size +1 >= (Array.length q.queue) then enlarge (2*(size+1)) q;
+	let t = q.queue in
 	let k = ref (size+1) in
 	t.(!k) <- {priority=p;element=e};
 	while !k>1 && t.(!k/2).priority >= t.(!k).priority do
