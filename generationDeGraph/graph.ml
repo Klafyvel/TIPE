@@ -37,7 +37,8 @@ let graph_of_matrix m =
 
 (* Builds a random graph with the Watts and Strogatz method.
 *)
-let wattsStrogatz n k beta =
+Random.self_init ();;
+let wattsStrogatzMatrix n k beta =
 	let l = Array.init n 
 	(fun i -> Array.init n (fun j -> if (j<i-k/2)||(j=i)||j>(i+k/2) then false else true)) in
 	let wire i j = l.(i).(j) <- true;l.(j).(i) <- true in
@@ -55,5 +56,48 @@ let wattsStrogatz n k beta =
 			end
 		done;
 	done;
-	graph_of_matrix l
+	l
 ;;
+let wattsStrogatz n k beta =
+	graph_of_matrix (wattsStrogatzMatrix n k beta)
+;;
+
+(* Betweenness centrality of a graph via its adjacency matrix*)
+let betweenness g =
+	let n = Array.length g in
+  let cB = Array.create n (0.0) in
+  for s = 0 to n-1 do
+    let stack = Stack.create() in
+    let p = Array.create n ([]) in
+    let sigma = Array.create n ( 0.0) in
+    sigma.(s) <- 1.0;
+    let d = Array.create n ((-1)) in
+    d.(s) <- 0;
+    let q = Queue.create() in
+    Queue.enqueue q s;
+    while not (Queue.is_empty q) do
+      let v = Queue.dequeue_exn q in
+      Stack.push stack v;
+      for w = 0 to (n-1) do
+        let iw = g.(v).(w) in
+        if iw then
+          if d.(w) < 0 then begin
+            Queue.enqueue q w;
+            d.(w) <- d.(v) + 1;
+          end;
+          if d.(w) = (d.(v) + 1) then begin
+            sigma.(w) <- sigma.(w) +. sigma.(v);
+            p.(w) <- v::p.(w);
+          end;
+      done;
+    done;
+    let delta = Array.create n (0.0) in
+    while not (Stack.is_empty stack) do
+      let w = Stack.pop_exn stack in
+      List.iter ~f:(fun v -> delta.(v) <- delta.(v) +. sigma.(v) /. sigma.(w) *. (1.0 +. delta.(w))) p.(w);
+      if w != s then begin cB.(w) <- cB.(w) +. delta.(w); end;
+    done;
+  done;
+  cB
+;;
+
