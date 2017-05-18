@@ -1,0 +1,5 @@
+\select@language {french}
+\beamer@sectionintoc {1}{Modélisation}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Réseau social}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Caractéristiques des réseaux simulés}{7}{0}{1}
+\beamer@subsectionintoc {1}{3}{Génération de graphes}{12}{0}{1}

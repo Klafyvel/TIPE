@@ -1,0 +1,91 @@
+\documentclass[draft]{beamer}
+
+\usepackage{MyPack2}
+\usepackage[frenchkw]{algorithm2e}
+\usepackage{beamerthemeMontpellier}
+\usecolortheme{beaver}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{itemize item}[circle]
+\setbeamercolor{block title}{fg=black,bg=blue1}        % titre block normal 
+\setbeamercolor{block body}{fg=black,bg=bleu1!50}      % corps block normal
+\setbeamercolor{block body alerted}{fg=white,bg=red}   % idem pour un block alerte
+
+% Faire apparaître un sommaire avant chaque section
+\AtBeginSection[]{
+   \begin{frame}
+   \begin{center}{\Large Plan }\end{center}
+   %%% affiche en début de chaque section, les noms de sections et
+   %%% noms de sous-sections de la section en cours.
+   \tableofcontents[currentsection,hideothersubsections]
+   \end{frame} 
+}
+
+\title[Propagation de rumeurs dans un réseau social]{TIPE : Propagation de rumeurs dans un réseau social} 
+\author{Hugo LEVY-FALK}
+\date{ 2016 - 2017 }  
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Modélisation}
+\subsection{Réseau social}
+\begin{frame}
+  \frametitle{Modélisation}
+  On modélise un réseau social par un graphe.
+  \begin{itemize}
+    \item<2-> Personne → Nœud
+    \item<3-> Lien social → Arrête
+  \end{itemize}
+  \uncover<4->{
+    \begin{alertblock}{}
+    \begin{center}
+      On ne prend pas en compte la "qualité" de la relation.
+    \end{center}
+    \end{alertblock}
+  }
+\end{frame}
+\subsection{Caractéristiques des réseaux simulés}
+\begin{frame}
+  \frametitle{Caractéristiques des réseaux simulés}
+  \begin{itemize}
+    \item<2-> Six degrés de séparation (Facebook 4.57) \uncover<3->{→ Difficile à générer}
+    \item<4-> 500 nœuds
+    \item<5-> Algorithme de Watts-Strogatz
+  \end{itemize}
+\end{frame}
+\subsection{Génération de graphes}
+\begin{frame}
+  \frametitle{Algorithme de Watts-Strogatz}
+  \fontsize{10}{11}\selectfont
+  \begin{algorithm}[H]
+  \Donnees{$N \in \N, K \in \llbracket 1 , \lfloor\frac{N}{2}\rfloor\rrbracket, \beta \in [0,1]$
+  }
+  \Res{Matrice d'adjacence d'un graphe aléatoire.}
+  $M \leftarrow $ matrice avec pour $i\in \llbracket0,N-1\rrbracket$, $j\in \llbracket1,K\rrbracket$, $M_{i,i+j[N]} = M_{i,i-j[N]} = \text{Vrai}$, Faux pour les autres \;
+  \Pour{$i\in \llbracket0,N-1\rrbracket$}{
+    \Pour{$j\in \llbracket1,K\rrbracket$}{
+      $r \leftarrow$ Nombre aléatoire sur $[0,1]$\;
+      $M_{i,i+j[N]} \leftarrow $ Faux\;
+      $M_{i+j[N],i} \leftarrow $ Faux\;
+      \Si{$r<\beta$}{
+        Choisir au hasard $k$ tel que $M_{i,k}=\text{Faux}$\;
+        $M_{i,k} \leftarrow $ Vrai\;
+        $M_{k,i} \leftarrow $ Vrai\;
+      }
+    }
+  }
+  \Retour{$M$}
+  \end{algorithm}
+\end{frame} 
+\begin{frame}
+  \frametitle{Algorithme de Watts-Strogatz}
+  Insérer ici illustration de l'algorithme.
+\end{frame}
+
+
+
+\end{document}

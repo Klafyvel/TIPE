@@ -2,7 +2,7 @@ open Core.Std;;
 open Yojson.Basic.Util;;
 
 let graph_size = 500;;
-let nb_gen = 100;;
+let nb_gen = 1000 ;;
 let k = 50;;
 let beta = 0.6;;
 

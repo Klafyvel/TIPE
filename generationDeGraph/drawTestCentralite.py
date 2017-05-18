@@ -11,7 +11,7 @@ rang du noeud.
 """
 
 graph_size = 500
-nb_gen = 100
+nb_gen = 1000
 k = 50
 
 X = np.arange(graph_size)
@@ -48,8 +48,8 @@ for row in rows:
     process_standard_deviation(row[1])
 Y_deviation = [(y/nb_gen)**(1/2) for y in Y_deviation]
 conn.close()
-Y_shigh = [Y[x]+Y_deviation[x] for x in X]
-Y_slow = [Y[x]-Y_deviation[x] for x in X]
+Y_shigh = [Y[x]+Y_deviation[x]/2 for x in X]
+Y_slow = [Y[x]-Y_deviation[x]/2 for x in X]
 
 pl.close('all')
 fig = pl.figure()
@@ -65,4 +65,5 @@ pl.plot(X, Y_shigh, 'r', label="Écart-type")
 pl.plot(X, Y_slow, 'r')
 #pl.plot(X, Y_deviation)
 pl.legend(loc="best")
+pl.grid()
 pl.show()
