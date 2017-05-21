@@ -1,4 +1,4 @@
-\documentclass[draft]{beamer}
+\documentclass{beamer}
 
 \usepackage{MyPack2}
 \usepackage[frenchkw]{algorithm2e}
@@ -7,8 +7,8 @@
 
 \setbeamertemplate{blocks}[rounded][shadow=true]
 \setbeamertemplate{itemize item}[circle]
-\setbeamercolor{block title}{fg=black,bg=blue1}        % titre block normal 
-\setbeamercolor{block body}{fg=black,bg=bleu1!50}      % corps block normal
+\setbeamercolor{block title}{fg=white,bg=blue}        % titre block normal 
+\setbeamercolor{block body}{fg=black,bg=blue!25}      % corps block normal
 \setbeamercolor{block body alerted}{fg=white,bg=red}   % idem pour un block alerte
 
 % Faire apparaître un sommaire avant chaque section
@@ -57,6 +57,62 @@
     \item<5-> Algorithme de Watts-Strogatz
   \end{itemize}
 \end{frame}
+
+\subsection{Simulation de propagation}
+\begin{frame}
+  \frametitle{Jeu de coordination}
+  \begin{itemize}
+    \item<2-> Chaque nœud maximise son gain.
+    \item<3-> Un voisin dans l'état "informé" $\rightarrow$ gain $a$
+    \item<3-> Un voisin dans l'état "non-informé" $\rightarrow$ gain $b$
+  \end{itemize}
+  \visible<4->{
+    Si on note $p$ la proportion de voisins informés, le nœud maximise son gain en passant à l'état informé si et seulement si $ p\times a > (1-p) \times b $, ou encore $$ p > \frac{b}{a+b}$$
+  }
+  \visible<5->{
+    $\rightarrow$ On caractérise une rumeur par $q = \frac{b}{a+b}$.
+  }
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Jeu de coordination}
+  $\rightarrow$ On caractérise une rumeur par $q = \frac{b}{a+b}$.
+  \begin{block}{Remarques}
+    Soit un graphe $G = (V, E)$ avec $V$ un ensemble de nœuds et $E \subset V^2$.
+    \begin{itemize}
+      \item<2-> Si l'on pose $(V_k)_{k\in\N}$ une suite des nœuds dans l'état "informé" à l'étape $k$, s'il existe $n\in\N$ tel que $V_n = V_{n+1}$ alors la suite est stationnaire à partir du rang n.
+      \item<3-> La suite étant par ailleurs croissante pour l'inclusion et majorée, la suite converge et on finit une simulation en au plus $|V|$ étapes.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Cluster}
+  \begin{block}{Définition : $p$-cluster}
+    Soit un graphe $G = (V, E)$ avec $V$ un ensemble de nœuds et $E \subset V^2$. On appelle $p$-cluster tout sous-ensemble $C \subset V$ tel que pour tout $i\in C$ il existe un $p$-uplet $(v_k)_{k\in \llbracket1,p\rrbracket} \in C^p$ deux à deux distincts et tel que pour tout $k\in \llbracket1,p\rrbracket$, $i$ et $v_k$ soient voisins.
+  \end{block}
+  \begin{block}{Remarque}
+    Si le graphe est connexe (cas des graphes étudiés), l'ensemble forme un 1-cluster.
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les clusters sont les seuls obstacles aux rumeurs}
+  \begin{block}{Théorème}
+    Les clusters sont les seuls obstacles aux rumeurs.
+  \end{block}
+  On pose $n=|V|$, $q$ la note de la rumeur.
+  \only<2-2>{
+    S'il existe un $p$-cluster C avec $p>q$, alors tout nœud de C possède au moins une proportion $p$ de voisins non informés. Ceci valant pour tous les nœuds de C, aucun nœud de C ne sera informé au bout de $n$ étapes.
+  }
+  \only<3->{
+    S'il existe un nœud $i$ tel qu'au bout de $n$ étapes $i$ ne soit pas dans l'état informé, alors la proportion $p$ de voisins de $i$ dans l'état informé vérifie $p \leq q$ ou encore $(1-p) > q \leq 0$. Il existe donc des voisins de $i$ vérifiant cette propriété, on a un $z$-cluster avec $z>q$.
+  }
+\end{frame}
+
+\section{Implémentation et protocole expérimental}
+
 \subsection{Génération de graphes}
 \begin{frame}
   \frametitle{Algorithme de Watts-Strogatz}
@@ -69,9 +125,9 @@
   \Pour{$i\in \llbracket0,N-1\rrbracket$}{
     \Pour{$j\in \llbracket1,K\rrbracket$}{
       $r \leftarrow$ Nombre aléatoire sur $[0,1]$\;
-      $M_{i,i+j[N]} \leftarrow $ Faux\;
-      $M_{i+j[N],i} \leftarrow $ Faux\;
       \Si{$r<\beta$}{
+        $M_{i,i+j[N]} \leftarrow $ Faux\;
+        $M_{i+j[N],i} \leftarrow $ Faux\;
         Choisir au hasard $k$ tel que $M_{i,k}=\text{Faux}$\;
         $M_{i,k} \leftarrow $ Vrai\;
         $M_{k,i} \leftarrow $ Vrai\;
@@ -83,9 +139,43 @@
 \end{frame} 
 \begin{frame}
   \frametitle{Algorithme de Watts-Strogatz}
-  Insérer ici illustration de l'algorithme.
+  \begin{figure}[H]
+    \includegraphics[scale=0.5]{WS_1.eps}
+  \end{figure}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Algorithme de Watts-Strogatz}
+  \begin{figure}[H]
+    \includegraphics[scale=0.5]{WS_2.eps}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algorithme de Watts-Strogatz}
+  \begin{figure}[H]
+    \includegraphics[scale=0.5]{WS_3.eps}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algorithme de Watts-Strogatz}
+  \begin{figure}[H]
+    \includegraphics[scale=0.5]{WS_4.eps}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algorithme de Watts-Strogatz}
+  \begin{figure}[H]
+    \includegraphics[scale=0.5]{WS_5.eps}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Réseaux simulés}
+  Blabla taille des réseaux...
+\end{frame}
 
 
 \end{document}
