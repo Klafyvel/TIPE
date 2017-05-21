@@ -59,7 +59,7 @@ let process db graph_size nb_gen k beta max_spread_step a b =
     {graph_no=i; prop_spread=prop_spread}
   in  
   let experiment init db= 
-    let exp_name = Printf.sprintf ("spreading_random_%d_%d_%d_%d_%d_%d_%d_%d") 
+    let exp_name = Printf.sprintf ("r_spreading_random_%d_%d_%d_%d_%d_%d_%d_%d") 
       graph_size (int_of_float (beta*.100.0)) k nb_gen init max_spread_step (int_of_float a) (int_of_float b) in
     print_endline ("Nom de l'expérience : "^exp_name);
     let cur_step = ref (match Experiment.get_experiment db exp_name
@@ -86,16 +86,23 @@ let graph_size = 500;;
 let nb_gen = 100;;
 let max_spread_step = 500;;
 
+let rec (^) k n = if n=0 then 1 else
+  if (n mod 2) = 0 then let r = k ^ (n/2) in r*r
+  else 
+    k * (k ^ (n-1))
+;;
+
+
 let () = 
   print_endline "Initialisation de Random.";
   Random.self_init ();
   print_endline "Ouverture de la base de données.";
   let db = Experiment.load_db () in
-  for k = 1 to 10 do
+  for k = 0 to 3 do
     for b = 0 to 4 do 
-      process db graph_size nb_gen (50*k) ((float_of_int b) *. 0.25) max_spread_step 1.0 1.0;
-      process db graph_size nb_gen (50*k) ((float_of_int b) *. 0.25) max_spread_step 3.0 1.0;
-      process db graph_size nb_gen (50*k) ((float_of_int b) *. 0.25) max_spread_step 1.0 3.0;
+      process db graph_size nb_gen (50*(2^k)) ((float_of_int b) *. 0.25) max_spread_step 1.0 1.0;
+      process db graph_size nb_gen (50*(2^k)) ((float_of_int b) *. 0.25) max_spread_step 3.0 1.0;
+      process db graph_size nb_gen (50*(2^k)) ((float_of_int b) *. 0.25) max_spread_step 1.0 3.0;
     done;
   done;
   print_endline "Fermeture de la base de données.";

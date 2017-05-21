@@ -67,8 +67,8 @@ let wattsStrogatzMatrix n k beta =
 	for i = 0 to n-1 do
 		for j = i+1 to (i+k/2) do
 			let r = Random.float 1.0 in
-      unwire i j;
 			if r < beta then begin
+        unwire i j;
 				let k = ref (Random.int n) in
 				while (wired i !k) || (!k = i) do
 					k := Random.int n
