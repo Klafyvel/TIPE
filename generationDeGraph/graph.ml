@@ -1,39 +1,4 @@
 open Core.Std;;
-type graph_element = {id:int;mutable link:int list;degree: int ref};;
-
-let make_empty_node ()= {id=0;link=[];degree=ref 0};;
-let degree e = !(e.degree);;
-let add_link e id = 
-	let rec loop l = match l with
-	| [] -> incr e.degree;[id]
-	| hd::tl when hd <> id -> hd::(loop tl)
-	| _ -> l
-	in
-	e.link <- loop e.link;;
-let are_linked e1 e2 =
-	let rec loop l = match l with
-	| [] -> false
-	| hd::_ when hd=e2.id -> true
-	| _::tl -> loop tl
-	in
-	loop e1.link
-;;
-
-type graph = graph_element array;;
-(* Creates a graph with s nodes. Each node has an unique id and is unconnected. *)
-let make s = Array.init s (fun x -> {id=x;link=[];degree=ref 0});;
-
-(* Creates a graph from a matrix. *)
-let graph_of_matrix m =
-	let n = Array.length m in
-	let g = make n in
-	for i = 0 to n-1 do
-		for j = 0 to n-1 do
-			if m.(i).(j) then add_link g.(i) j
-		done
-	done;
-	g
-;;
 
 (* Builds a random graph with the Watts and Strogatz method.
 *)
@@ -79,9 +44,6 @@ let wattsStrogatzMatrix n k beta =
 	done;
 	l
 ;;
-let wattsStrogatz n k beta =
-	graph_of_matrix (wattsStrogatzMatrix n k beta)
-;;
 
 (* Betweenness centrality of a graph via its adjacency matrix*)
 let betweenness g =
@@ -122,3 +84,29 @@ let betweenness g =
   cB
 ;;
 
+let degree g i =
+  let n = Array.length g in
+  let r = ref 0 in
+  for j = 0 to (n-1) do
+     if g.(i).(j) then incr r
+  done;
+  !r
+;;
+
+let maxDegree g n =
+  let deg = degree g in
+  let size = Array.length g in
+  let rec loop i r = if i >= size then r else
+    loop (i+1) ((deg i, i)::r)
+  in
+  SortFirst.sortFirst n (loop 0 [])
+;;
+
+let maxBetweenness g n =
+  let a = betweenness g in
+  let size = Array.length g in
+  let rec loop i r = if i >= size then r else
+    loop (i+1) ((a.(i), i)::r)
+  in
+  SortFirst.sortFirst n (loop 0 [])
+;;

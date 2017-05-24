@@ -35,20 +35,19 @@ let save_step db e exp_name=
 ;;
 
 let process db graph_size nb_gen k beta max_spread_step a b =
-  let choose_spread init = 
+  let choose_spread g init = 
     let s = Array.create graph_size false in
-    let k = ref 0 in
     let n = int_of_float ((float_of_int graph_size) *. init) in
-    while !k <= n do
-      let i = Random.int graph_size in
-      if not s.(i) then (incr k; s.(i) <- true)    
-    done;
-    s
+    let rec loop l = match l with
+    | [] -> ()
+    | hd::tl -> s.(hd) <- true; loop tl
+    in
+    loop (Graph.maxDegree g n); s
   in
   let step i init= 
     let g = Graph.wattsStrogatzMatrix graph_size k beta in
     let prop_spread = Array.create max_spread_step 0.0 in
-    let spread = choose_spread init in
+    let spread = choose_spread g init in
     let j = ref 0 in
     let p = ref (-1.0) in
     while !j <= (max_spread_step-1) && prop_spread.(!j) != !p do
@@ -59,7 +58,7 @@ let process db graph_size nb_gen k beta max_spread_step a b =
     {graph_no=i; prop_spread=prop_spread}
   in  
   let experiment init db= 
-    let exp_name = Printf.sprintf ("r_spreading_random_%d_%d_%d_%d_%d_%d_%d_%d") 
+    let exp_name = Printf.sprintf ("r_spreading_degree_%d_%d_%d_%d_%d_%d_%d_%d") 
       graph_size (int_of_float (beta*.100.0)) k nb_gen init max_spread_step (int_of_float a) (int_of_float b) in
     print_endline ("Nom de l'expérience : "^exp_name);
     let cur_step = ref (match Experiment.get_experiment db exp_name
