@@ -31,6 +31,14 @@
   \titlepage
 \end{frame}
 
+\section{Rappel de la problématique}
+\begin{frame}
+  \frametitle{Rappel de la problématique}
+  \begin{center}
+  Comment propager une rumeur le plus rapidement possible à un maximum de nœuds d'un réseau social ?
+  \end{center}
+\end{frame}
+
 \section{Modélisation}
 \subsection{Réseau social}
 \begin{frame}
@@ -52,9 +60,8 @@
 \begin{frame}
   \frametitle{Caractéristiques des réseaux simulés}
   \begin{itemize}
-    \item<2-> Six degrés de séparation (Facebook 4.57) \uncover<3->{→ Difficile à générer}
-    \item<4-> 500 nœuds
-    \item<5-> Algorithme de Watts-Strogatz
+    \item<2-> Stanley Milgram : Six degrés de séparation (Facebook 4.57)
+    \item<3-> Algorithme de Watts-Strogatz
   \end{itemize}
 \end{frame}
 
@@ -81,7 +88,8 @@
   \begin{block}{Remarques}
     Soit un graphe $G = (V, E)$ avec $V$ un ensemble de nœuds et $E \subset V^2$.
     \begin{itemize}
-      \item<2-> Si l'on pose $(V_k)_{k\in\N}$ une suite des nœuds dans l'état "informé" à l'étape $k$, s'il existe $n\in\N$ tel que $V_n = V_{n+1}$ alors la suite est stationnaire à partir du rang n.
+      \item<1-> Pas de propagation si $q<1$;
+      \item<2-> Si l'on pose $(V_k)_{k\in\N}$ une suite des nœuds dans l'état "informé" à l'étape $k$, s'il existe $n\in\N$ tel que $V_n = V_{n+1}$ alors la suite est stationnaire à partir du rang n;
       \item<3-> La suite étant par ailleurs croissante pour l'inclusion et majorée, la suite converge et on finit une simulation en au plus $|V|$ étapes.
     \end{itemize}
   \end{block}
@@ -111,14 +119,12 @@
   }
 \end{frame}
 
-\section{Implémentation et protocole expérimental}
-
-\subsection{Génération de graphes}
+\section{Génération de graphes}
 \begin{frame}
   \frametitle{Algorithme de Watts-Strogatz}
   \fontsize{10}{11}\selectfont
   \begin{algorithm}[H]
-  \Donnees{$N \in \N, K \in \llbracket 1 , \lfloor\frac{N}{2}\rfloor\rrbracket, \beta \in [0,1]$
+  \Donnees{$N \in \N, K \in \llbracket 1, \lfloor\frac{N}{2}\rfloor\rrbracket (N \gg K \gg \ln N), \beta \in [0,1]$
   }
   \Res{Matrice d'adjacence d'un graphe aléatoire.}
   $M \leftarrow $ matrice avec pour $i\in \llbracket0,N-1\rrbracket$, $j\in \llbracket1,K\rrbracket$, $M_{i,i+j[N]} = M_{i,i-j[N]} = \text{Vrai}$, Faux pour les autres \;
@@ -174,8 +180,83 @@
 
 \begin{frame}
   \frametitle{Réseaux simulés}
-  Blabla taille des réseaux...
+  \begin{itemize}
+    \item<1-> 500 nœuds;
+    \item<2-> Au plus 500 étapes de simulation;
+    \item<3-> On lance la simulation 100 fois;
+    \item<4-> 3 paramètres à examiner ($\beta$, $q$, proportion initiale d'informés)
+  \end{itemize}
+  \uncover<5->{
+    $\rightarrow$ Stockage des résultats dans une base de donnée des résultats des calculs afin de pouvoir interrompre l'expérience à tout instant.
+  }
 \end{frame}
 
+\section{Expérience 1}
+\begin{frame}
+  \frametitle{Protocole expérimental}
+  On fixe $K=50$.
+  Pour $\beta \in \{0,0.25,0.5,1\}$, pour une proportion initiale de 1\% à 99\% faire 100 expériences de propagation en choisissant les éléments initiaux au hasard et stocker la propagation à chaque étape de la simulation.
 
+  \uncover<2->{
+    But : pouvoir comparer les résultats des autres expériences, éventuellement fixer certains paramètres qui ont peu d'influence.
+  }
+\end{frame}
+
+\subsection{Proportion atteinte en fonction de la proportion initiale}
+\begin{frame}
+  \frametitle{Courbe type}
+  \begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta50_ec.png}
+  \end{center}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Faible influence du paramètre $\beta$}
+  \only<1-1> {
+  \begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta0_ec.png}
+  \end{center}
+  \end{figure}
+  }
+  \only<2-2> {
+  \begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta25_ec.png}
+  \end{center}
+  \end{figure}
+  }
+  \only<3-3> {
+  \begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta50_ec.png}
+  \end{center}
+  \end{figure}
+  }
+  \only<4-4> {
+  \begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta75_ec.png}
+  \end{center}
+  \end{figure}
+  }
+  \only<5-5> {
+  \begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta100_ec.png}
+  \end{center}
+  \end{figure}
+  }
+\end{frame}
+
+\begin{frame}
+  \frametitle{Influence de $q$}
+  \begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/comp_random_beta50.png}
+  \end{center}
+  \end{figure}
+\end{frame}
 \end{document}
