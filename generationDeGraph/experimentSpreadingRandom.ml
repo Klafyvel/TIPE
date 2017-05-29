@@ -11,13 +11,15 @@ type exp_stat = {
 let json_of_exp_stat e = 
   `Assoc [
   ("graph_no", `Int e.graph_no);
-  ("prop_spread", `List (List.map (Array.to_list e.prop_spread) ~f:(fun x -> `Float x)))
+  ("prop_spread", 
+    `List (List.map (Array.to_list e.prop_spread) ~f:(fun x -> `Float x)))
 ];;
 
 let exp_stat_of_json json =
   {
     graph_no = json |> member "graph_no" |> to_int;
-    prop_spread = json |> member "prop_spread" |> to_list |> List.map ~f:(fun x -> x |> to_float) |> Array.of_list
+    prop_spread = json |> member "prop_spread" |> to_list 
+    |> List.map ~f:(fun x -> x |> to_float) |> Array.of_list
   }
 ;;
 
@@ -52,7 +54,8 @@ let process db graph_size nb_gen k beta max_spread_step a b =
     let j = ref 0 in
     let p = ref (-1.0) in
     while !j <= (max_spread_step-1) && prop_spread.(!j) != !p do
-      prop_spread.(!j) <- (float_of_int (Spread.step_p g a b spread)) /. (float_of_int graph_size);
+      prop_spread.(!j) <- 
+      (float_of_int (Spread.step_p g a b spread)) /. (float_of_int graph_size);
       if !j > 0 then (p := prop_spread.(!j-1));
       incr j;
     done;
@@ -60,7 +63,8 @@ let process db graph_size nb_gen k beta max_spread_step a b =
   in  
   let experiment init db= 
     let exp_name = Printf.sprintf ("r_spreading_random_%d_%d_%d_%d_%d_%d_%d_%d") 
-      graph_size (int_of_float (beta*.100.0)) k nb_gen init max_spread_step (int_of_float a) (int_of_float b) in
+      graph_size (int_of_float (beta*.100.0)) 
+      k nb_gen init max_spread_step (int_of_float a) (int_of_float b) in
     print_endline ("Nom de l'expérience : "^exp_name);
     let cur_step = ref (match Experiment.get_experiment db exp_name
     with
@@ -69,8 +73,6 @@ let process db graph_size nb_gen k beta max_spread_step a b =
     ) in
     let beg = !cur_step.graph_no + 1 in
     for i = beg to nb_gen - 1 do
-      (* Printf.printf "(Initial=%f) Progression : %d / %d" ((float_of_int init)/.100.0) i nb_gen; *)
-      (* print_newline (); *)
       cur_step := step i ((float_of_int init)/.100.0);
       save_step db !cur_step exp_name
     done;
@@ -86,22 +88,18 @@ let graph_size = 500;;
 let nb_gen = 100;;
 let max_spread_step = 500;;
 
-let rec (^) k n = if n=0 then 1 else
-  if (n mod 2) = 0 then let r = k ^ (n/2) in r*r
-  else 
-    k * (k ^ (n-1))
-;;
-
-
 let () = 
   print_endline "Initialisation de Random.";
   Random.self_init ();
   print_endline "Ouverture de la base de données.";
   let db = Experiment.load_db () in
   for b = 0 to 4 do
-    process db graph_size nb_gen 50 ((float_of_int b) *. 0.25) max_spread_step 1.0 1.0;
-    process db graph_size nb_gen 50 ((float_of_int b) *. 0.25) max_spread_step 3.0 1.0;
-    process db graph_size nb_gen 50 ((float_of_int b) *. 0.25) max_spread_step 1.0 3.0;
+    process db graph_size nb_gen 50 
+      ((float_of_int b) *. 0.25) max_spread_step 1.0 1.0;
+    process db graph_size nb_gen 50 
+      ((float_of_int b) *. 0.25) max_spread_step 3.0 1.0;
+    process db graph_size nb_gen 50 
+      ((float_of_int b) *. 0.25) max_spread_step 1.0 3.0;
   done;
   print_endline "Fermeture de la base de données.";
   if (Experiment.close_db db) then

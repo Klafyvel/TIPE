@@ -119,6 +119,23 @@
   }
 \end{frame}
 
+\subsection{Propagation optimale}
+\begin{frame}
+  \frametitle{Comment caractériser une propagation optimale ?}
+  \begin{itemize}
+    \item<1-> Capacité à atteindre l'ensemble du graphe;
+    \item<2-> Nombre d'itérations de simulation le plus faible possible;
+  \end{itemize}
+  \uncover<3->{
+    Problème(s) : Unicité de la solution ? identification des propriétés permettant une telle propagation ?
+  }
+  
+  \uncover<4->{
+  $\rightarrow$ Comparaison de critères qualitatifs.
+  }
+
+\end{frame}
+
 \section{Génération de graphes}
 \begin{frame}
   \frametitle{Algorithme de Watts-Strogatz}
@@ -195,12 +212,14 @@
 \begin{frame}
   \frametitle{Protocole expérimental}
   On fixe $K=50$.
-  Pour $\beta \in \{0,0.25,0.5,1\}$, pour une proportion initiale de 1\% à 99\% faire 100 expériences de propagation en choisissant les éléments initiaux au hasard et stocker la propagation à chaque étape de la simulation.
+  Pour $\beta \in \{0,0.25,0.5,1\}$ et $q\in \{0.25, 0.5, 0.75\}$, pour une proportion initiale de 1\% à 99\% faire 100 expériences de propagation en choisissant les éléments initiaux au hasard et stocker la propagation à chaque étape de la simulation.
 
   \uncover<2->{
     But : pouvoir comparer les résultats des autres expériences, éventuellement fixer certains paramètres qui ont peu d'influence.
   }
 \end{frame}
+
+\subsection{Courbes de propagation}
 
 \subsection{Proportion atteinte en fonction de la proportion initiale}
 \begin{frame}
@@ -253,10 +272,67 @@
 
 \begin{frame}
   \frametitle{Influence de $q$}
+  \only<1-1>{
   \begin{figure}[H]
   \begin{center}
-    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/comp_random_beta50.png}
+    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q25_Beta50_ec.png}
   \end{center}
   \end{figure}
+  }
+  \only<2-2>{
+  \begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta50_ec.png}
+  \end{center}
+  \end{figure}
+  }
+  \only<3-3>{
+  \begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q75_Beta50_ec.png}
+  \end{center}
+  \end{figure}
+  }
+  % \begin{figure}[H]
+  % \begin{center}
+    % \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/comp_random_beta50.png}
+  % \end{center}
+  % \end{figure}
 \end{frame}
+
+\section{Expérience 2}
+\begin{frame}
+  \frametitle{Protocole expérimental}
+  On fixe $K=50$.
+  Pour $\beta \in \{0,0.25,0.5,1\}$ et $q\in \{0.25, 0.5, 0.75\}$, pour une proportion initiale de 1\% à 99\% faire 100 expériences de propagation en choisissant les éléments initiaux possèdant la plus grande arité et stocker la propagation à chaque étape de la simulation.
+\end{frame}
+\begin{frame}
+  \frametitle{Remarques sur les résultats}
+  \begin{itemize}
+    \item<1-> Le résultat pour $\beta=0$ est inexploitable;
+    \item<2-> On retrouve les mêmes effets qualitatifs de $\beta$ et $q$.
+  \end{itemize}
+\end{frame}
+
+\section{Expérience 3}
+\begin{frame}
+  \frametitle{Protocole expérimental}
+  On fixe $K=50$.
+  Pour $\beta \in \{0,0.25,0.5,1\}$ et $q\in \{0.25, 0.5, 0.75\}$, pour une proportion initiale de 1\% à 99\% faire 100 expériences de propagation en choisissant les éléments initiaux possèdant la plus grande centralité (proportion de plus courts chemins passants par un nœud) et stocker la propagation à chaque étape de la simulation.
+\end{frame}
+\begin{frame}
+  \frametitle{Remarques sur les résultats}
+  \begin{itemize}
+    \item<1-> Le résultat pour $\beta=0$ est inexploitable;
+    \item<2-> On retrouve les mêmes effets qualitatifs de $\beta$ et $q$.
+  \end{itemize}
+\end{frame}
+
+\section{Résultats}
+\subsection{Comparaison}
+\subsection{Conséquences}
+
+\section{Conclusion}
+
+
 \end{document}

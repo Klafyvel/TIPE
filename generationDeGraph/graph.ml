@@ -77,7 +77,8 @@ let betweenness g =
     let delta = Array.create n (0.0) in
     while not (Stack.is_empty stack) do
       let w = Stack.pop_exn stack in
-      List.iter ~f:(fun v -> delta.(v) <- delta.(v) +. sigma.(v) /. sigma.(w) *. (1.0 +. delta.(w))) p.(w);
+      List.iter ~f:(fun v -> delta.(v) <- 
+        delta.(v) +. sigma.(v) /. sigma.(w) *. (1.0 +. delta.(w))) p.(w);
       if w != s then begin cB.(w) <- cB.(w) +. delta.(w); end;
     done;
   done;

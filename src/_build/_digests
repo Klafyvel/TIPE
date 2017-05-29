@@ -1,5 +1,0 @@
-"Rule: ocaml: ml & cmi -> cmx & o (%=graph )": ",\224\000\184\199\018\178\199\213H\163\144\2290\004\224"
-"Resource: /home/klafyvel/dev/MPSI/TIPE/src/graph.ml": "H\156M\235\153lnK\234\136\140\238\000sh\015"
-"Rule: ocaml: ml -> cmo & cmi (%=graph )": "\211\015=\029N@\217\004d\208\220\217\225\022\022*"
-"Rule: ocaml: cmx* & o* -> native (%=graph )": "\161c|\230\177\144A:\210\127\215\003\185\249\222\002"
-"Rule: ocaml dependencies ml (%=graph )": "\195;\210\236?Y\145\216R'\182\185#\233\137\144"
