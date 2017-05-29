@@ -1,4 +1,3 @@
-import csv
 import matplotlib.pyplot as pl
 import numpy as np
 import sqlite3
@@ -16,8 +15,8 @@ for a,b in [(1,1), (1,3), (3,1)]:
         pl.close('all')
         fig = pl.figure()
         ax = fig.add_subplot(111)
-        # fig.suptitle("Propagation finale pour une distribution initiale aléatoire en fonction de la proportion initiale.", fontweight='bold')
-        ax.set_title('Taille du graphe={} Nb gen={} K={}, q={}, Beta ={}%'.format(graph_size,nb_gen,k,b/(a+b),beta))
+        ax.set_title('Taille du graphe={} Nb gen={} K={}, q={}, Beta ={}%'
+            .format(graph_size,nb_gen,k,b/(a+b),beta))
         ax.set_ylabel("Proportion finale")
         ax.set_xlabel("Proportion initiale (%)")
         
@@ -31,8 +30,9 @@ for a,b in [(1,1), (1,3), (3,1)]:
         
         for x in X:
             cursor = conn.execute(
-                "SELECT value FROM r_spreading_random_{graph_size}_{beta}_{k}_{nb_gen}_{x}_{max_spread_step}_{a}_{b}".format(
-                        **locals()))
+                "SELECT value FROM r_spreading_random_"+
+                "{graph_size}_{beta}_{k}_{nb_gen}_{x}_{max_spread_step}_{a}_{b}"
+                .format(**locals()))
             rows = cursor.fetchall()
             v = 0
             n = len(rows)
@@ -65,4 +65,5 @@ for a,b in [(1,1), (1,3), (3,1)]:
         
         pl.legend(loc="best")
         pl.grid()
-        pl.savefig("resultats/random_finale_f_initiale_q{}_Beta{}_ec".format(int(b/(a+b)*100), beta))
+        pl.savefig("resultats/random_finale_f_initiale_q{}_Beta{}_ec"
+            .format(int(b/(a+b)*100), beta))
