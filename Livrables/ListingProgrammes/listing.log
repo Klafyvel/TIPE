@@ -1,6 +1,6 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Arch Linux) (preloaded format=xelatex 2017.5.7)  31 MAY 2017 12:47
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Arch Linux) (preloaded format=xelatex 2017.5.7)  31 MAY 2017 13:07
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **listing.tex
 (./listing.tex
@@ -637,30 +637,235 @@ Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 \f@ncyO@olf=\skip91
 \f@ncyO@orf=\skip92
 ))
-(/usr/share/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count168
-\lst@gtempboxa=\box53
-\lst@token=\toks24
-\lst@length=\count169
-\lst@currlwidth=\dimen184
-\lst@column=\count170
-\lst@pos=\count171
-\lst@lostspace=\dimen185
-\lst@width=\dimen186
-\lst@newlines=\count172
-\lst@lineno=\count173
-\lst@maxwidth=\dimen187
+(/usr/share/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2016/10/31 v2.4.1 Yet another Pygments shim for LaTeX
 
-(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count174
-\lst@skipnumbers=\count175
-\lst@framebox=\box54
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2015/06/04 1.6 listings configuration
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2016/09/02 v1.2.1 fvextra - extensions and patches for fancyvr
+b
+
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count168
+)
+(/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count169
+\FV@InFile=\read2
+\FV@TabBox=\box53
+\c@FancyVerbLine=\count170
+\FV@StepNumber=\count171
+\FV@OutFile=\write3
+) (/usr/share/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2017/02/22 v2.0g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 ))
-Package: listings 2015/06/04 1.6 (Carsten Heinz)
+(/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+\linenopenalty=\count172
+\output=\toks24
+\linenoprevgraf=\count173
+\linenumbersep=\dimen184
+\linenumberwidth=\dimen185
+\c@linenumber=\count174
+\c@pagewiselinenumber=\count175
+\c@LN@truepage=\count176
+\c@internallinenumber=\count177
+\c@internallinenumbers=\count178
+\quotelinenumbersep=\dimen186
+\bframerule=\dimen187
+\bframesep=\dimen188
+\bframebox=\box54
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count179
+\c@FV@TrueTabCounter=\count180
+\FV@TabBox@Group=\box55
+\FV@TmpLength=\skip93
+\c@FV@HighlightLinesStart=\count181
+\c@FV@HighlightLinesStop=\count182
+\FV@BreakIndent=\dimen189
+\FV@BreakSymbolSepLeft=\dimen190
+\FV@BreakSymbolSepRight=\dimen191
+\FV@BreakSymbolIndentLeft=\dimen192
+\FV@BreakSymbolIndentRight=\dimen193
+\c@FancyVerbLineBreakLast=\count183
+\FV@LineBox=\box56
+\FV@LineIndentBox=\box57
+)
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count184
+\float@exts=\toks25
+\float@box=\box58
+\@float@everytoks=\toks26
+\@floatcapt=\box59
+)
+(/usr/share/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 67.
+)
+(/usr/share/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/catchfile.sty
+Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
+)
+runsystem(uname -s > "listing.w18")...executed.
+
+ (./listing.w18)
+runsystem(rm -- "listing.w18")...executed.
+
+)
+(/usr/share/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write4
+\integerpart=\count185
+\decimalpart=\count186
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+(/usr/share/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip94
+\fb@frw=\dimen194
+\fb@frh=\dimen195
+\FrameRule=\dimen196
+\FrameSep=\dimen197
+)
+\minted@appexistsfile=\read3
+\minted@bgbox=\box60
+\minted@code=\write5
+\c@minted@FancyVerbLineTemp=\count187
+\c@minted@pygmentizecounter=\count188
+\@float@every@listing=\toks27
+\c@listing=\count189
+)
+runsystem(mkdir -p _minted-listing)...executed.
+
+runsystem(which pygmentize && touch listing.aex)...executed.
+
+runsystem(rm listing.aex)...executed.
+
  (./listing.aux)
 \openout1 = `listing.aux'.
 
@@ -677,6 +882,13 @@ LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 9.
+
+(/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
 LaTeX Font Info:    ... okay on input line 9.
 .................................................
 . fontspec info: "setup-math"
@@ -750,8 +962,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 99.
 )
-\Gin@req@height=\dimen188
-\Gin@req@width=\dimen189
+\Gin@req@height=\dimen198
+\Gin@req@width=\dimen199
 )
 LaTeX Info: Redefining \dots on input line 9.
 LaTeX Info: Redefining \up on input line 9.
@@ -791,9 +1003,8 @@ LaTeX Info: Redefining \up on input line 9.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: listings package is loaded.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count176
 LaTeX Font Info:    Try loading font information for U+msa on input line 10.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -806,178 +1017,57 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Try loading font information for U+stmry on input line 10.
 
 (/usr/share/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) (./listing.toc)
-\tf@toc=\write3
-\openout3 = `listing.toc'.
+\tf@toc=\write6
+\openout6 = `listing.toc'.
 
  [1
 
 ]
-(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(/usr/share/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2015/06/04 1.6 listings language file
-)
-(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-)
-(../../generationDeGraph/graph.ml [2]
-Overfull \hbox (19.75078pt too wide) in paragraph at lines 81--82
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[3]) (../../generationDeGraph/experiment.ml
-Overfull \hbox (73.75133pt too wide) in paragraph at lines 2--3
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[4]
-Overfull \hbox (1.7506pt too wide) in paragraph at lines 43--44
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
+(./_minted-listing/default-pyg-prefix.pygstyle)
+(./_minted-listing/default.pygstyle)
+runsystem(pygmentize -l ocaml -f latex -P commandprefix=PYG -F tokenmerge -o _m
+inted-listing/6FC8DCB5610DD5340B75CAA3435964E05F4822EEFDC7DC60F0C21E6FA72967D0.
+pygtex ../../generationDeGraph/graph.ml)...executed.
 
 
-Overfull \hbox (37.75096pt too wide) in paragraph at lines 44--45
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
+(./_minted-listing/6FC8DCB5610DD5340B75CAA3435964E05F4822EEFDC7DC60F0C21E6FA729
+67D0.pygtex
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2.
+ [2] [3])
+(./_minted-listing/DD3E2969E3C4DE4026DBB0163D789CB027D8DB8D5F93F61C3FB79704976F
+65C1.pygtex [4] [5])
+(./_minted-listing/D931C162BE8AA454006426C2FD2018947B56B2ADB8D0EC0B5130930A4268
+F9E9.pygtex)
+(./_minted-listing/09337454B7D11EAAC521B2566AC39908F8636BFEDC092DD4AC4345F954D4
+9999.pygtex [6])
+(./_minted-listing/206B6302A106FC232AEC90A2B748995ACB4DA94A46666BC616EB86A3D062
+0700.pygtex [7] [8])
+(./_minted-listing/1091C45CF185957836BA5CFDE58B7EA627C3587EDF47CE7B0F6620977EB0
+8221.pygtex [9] [10])
+(./_minted-listing/1107DE2E1F17D31F1A3B084E0507CA236B6FCAA91A1A3E5040B416AF2861
+7F7B.pygtex [11] [12] [13])
+(./_minted-listing/930D2BF2DEF04E70173097A58A008A06B960008044A21069B64A6A6F2435
+3636.pygtex [14])
+(./_minted-listing/F6250432776EE1AAF1293105A8DD29BF86E1D84ADB6B49437089A40CFEDA
+4447.pygtex [15] [16])
+(./_minted-listing/AEBBD1B963A504CDEDEC063E8D0649190EB19DB4ADD2F82B82BFC8E7C764
+3147.pygtex [17])
+runsystem(rm _minted-listing/4C758AEEC7EA2E7884EBA7755D6FC6FF5F4822EEFDC7DC60F0
+C21E6FA72967D0.pygtex)...executed.
 
-
-Overfull \hbox (61.7512pt too wide) in paragraph at lines 45--46
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (19.75078pt too wide) in paragraph at lines 63--64
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[5]) (../../generationDeGraph/sortFirst.ml) (../../generationDeGraph/spread.ml
-[6]) (../../generationDeGraph/experimentSpreadingRandom.ml
-Overfull \hbox (25.75084pt too wide) in paragraph at lines 15--16
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[7]
-Overfull \hbox (55.75114pt too wide) in paragraph at lines 58--59
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (61.7512pt too wide) in paragraph at lines 65--66
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (13.75072pt too wide) in paragraph at lines 67--68
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[8]) (../../generationDeGraph/experimentSpreadingDegree.ml [9]
-Overfull \hbox (55.75114pt too wide) in paragraph at lines 57--58
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (61.7512pt too wide) in paragraph at lines 64--65
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (13.75072pt too wide) in paragraph at lines 66--67
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[10]) (../../generationDeGraph/experimentSpreadingBetween.ml [11]
-Overfull \hbox (25.75084pt too wide) in paragraph at lines 15--16
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (55.75114pt too wide) in paragraph at lines 57--58
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[12]
-Overfull \hbox (67.75127pt too wide) in paragraph at lines 64--65
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (13.75072pt too wide) in paragraph at lines 66--67
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[13]) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(../../generationDeGraph/drawExperimentSpreadingRandom.py
-Overfull \hbox (43.75102pt too wide) in paragraph at lines 18--19
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (49.75108pt too wide) in paragraph at lines 20--21
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[14]
-Overfull \hbox (61.7512pt too wide) in paragraph at lines 50--51
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
-
- []
-
-) (../../generationDeGraph/drawExperimentSpreadingRandom_initial.py
-Overfull \hbox (37.75096pt too wide) in paragraph at lines 19--20
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[15]
-Overfull \hbox (61.7512pt too wide) in paragraph at lines 35--36
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (1.7506pt too wide) in paragraph at lines 47--48
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (13.75072pt too wide) in paragraph at lines 68--69
-[][][][][][][][][][][][][][][][] 
- []
-
-) [16] (../../generationDeGraph/drawExperimentSpreadingDegree_initial.py
-Overfull \hbox (37.75096pt too wide) in paragraph at lines 19--20
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (61.7512pt too wide) in paragraph at lines 35--36
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (1.7506pt too wide) in paragraph at lines 47--48
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[17]
-Overfull \hbox (13.75072pt too wide) in paragraph at lines 67--68
-[][][][][][][][][][][][][][][][] 
- []
-
-) [18] (./listing.aux) )
+ [18] (./listing.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 17347 strings out of 493068
- 330747 string characters out of 6141029
- 465779 words of memory out of 5000000
- 21090 multiletter control sequences out of 15000+600000
- 11296 words of font info for 57 fonts, out of 8000000 for 9000
+ 18914 strings out of 493068
+ 373095 string characters out of 6141029
+ 507810 words of memory out of 5000000
+ 22587 multiletter control sequences out of 15000+600000
+ 8993 words of font info for 47 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 43i,12n,49p,10456b,4392s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,11n,45p,10411b,5761s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on listing.pdf (18 pages).

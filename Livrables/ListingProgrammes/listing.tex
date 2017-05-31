@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{MyPack2}
-\usepackage{listings}             % Include the listings-package
+\usepackage{minted}
 
 \title{TIPE : Propagation de rumeurs dans un réseau social\\Listing des programmes}
 \author{Hugo LEVY-FALK}
@@ -12,34 +12,33 @@
 \tableofcontents
 \newpage
 
-\lstset{language=Caml, tabsize=2}          % Set your language (you can change the language for each code-block optionally)
 \section{graph.ml}
-\lstinputlisting{../../generationDeGraph/graph.ml}
+\inputminted{ocaml}{../../generationDeGraph/graph.ml}
 
 \section{experiment.ml}
-\lstinputlisting{../../generationDeGraph/experiment.ml}
+\inputminted{ocaml}{../../generationDeGraph/experiment.ml}
 
 \section{sortFirst.ml}
-\lstinputlisting{../../generationDeGraph/sortFirst.ml}
+\inputminted{ocaml}{../../generationDeGraph/sortFirst.ml}
 
 \section{spread.ml}
-\lstinputlisting{../../generationDeGraph/spread.ml}
+\inputminted{ocaml}{../../generationDeGraph/spread.ml}
 
 \section{experimentSpreadingRandom.ml}
-\lstinputlisting{../../generationDeGraph/experimentSpreadingRandom.ml}
+\inputminted{ocaml}{../../generationDeGraph/experimentSpreadingRandom.ml}
 
 \section{experimentSpreadingDegree.ml}
-\lstinputlisting{../../generationDeGraph/experimentSpreadingDegree.ml}
+\inputminted{ocaml}{../../generationDeGraph/experimentSpreadingDegree.ml}
 
 \section{experimentSpreadingBetween.ml}
-\lstinputlisting{../../generationDeGraph/experimentSpreadingBetween.ml}
+\inputminted{ocaml}{../../generationDeGraph/experimentSpreadingBetween.ml}
 
 \section{drawExperimentSpreadingRandom.py}
-\lstinputlisting[language=Python]{../../generationDeGraph/drawExperimentSpreadingRandom.py}
+\inputminted{python}{../../generationDeGraph/drawExperimentSpreadingRandom.py}
 
 \section{drawExperimentSpreadingRandom\_initial.py}
-\lstinputlisting[language=Python]{../../generationDeGraph/drawExperimentSpreadingRandom_initial.py}
+\inputminted{python}{../../generationDeGraph/drawExperimentSpreadingRandom_initial.py}
 
 \section{drawExperimentSpreadingDegree\_initial.py}
-\lstinputlisting[language=Python]{../../generationDeGraph/drawExperimentSpreadingDegree_initial.py}
+\inputminted{python}{../../generationDeGraph/drawExperimentSpreadingDegree_initial.py}
 \end{document}
