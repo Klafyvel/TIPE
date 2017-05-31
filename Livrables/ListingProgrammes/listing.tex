@@ -6,39 +6,22 @@
 \author{Hugo LEVY-FALK}
 \date{2017}
 
+\newcommand\programme[2]{\section{#1}\inputminted{#2}{../../generationDeGraph/#1}}
+
 \begin{document}
 \maketitle
 \initPage{TIPE 2017}{Listing des programmes}{Hugo LEVY-FALK}\;
 \tableofcontents
 \newpage
 
-\section{graph.ml}
-\inputminted{ocaml}{../../generationDeGraph/graph.ml}
-
-\section{experiment.ml}
-\inputminted{ocaml}{../../generationDeGraph/experiment.ml}
-
-\section{sortFirst.ml}
-\inputminted{ocaml}{../../generationDeGraph/sortFirst.ml}
-
-\section{spread.ml}
-\inputminted{ocaml}{../../generationDeGraph/spread.ml}
-
-\section{experimentSpreadingRandom.ml}
-\inputminted{ocaml}{../../generationDeGraph/experimentSpreadingRandom.ml}
-
-\section{experimentSpreadingDegree.ml}
-\inputminted{ocaml}{../../generationDeGraph/experimentSpreadingDegree.ml}
-
-\section{experimentSpreadingBetween.ml}
-\inputminted{ocaml}{../../generationDeGraph/experimentSpreadingBetween.ml}
-
-\section{drawExperimentSpreadingRandom.py}
-\inputminted{python}{../../generationDeGraph/drawExperimentSpreadingRandom.py}
-
-\section{drawExperimentSpreadingRandom\_initial.py}
-\inputminted{python}{../../generationDeGraph/drawExperimentSpreadingRandom_initial.py}
-
-\section{drawExperimentSpreadingDegree\_initial.py}
-\inputminted{python}{../../generationDeGraph/drawExperimentSpreadingDegree_initial.py}
+\programme{graph.ml}{ocaml}
+\programme{experiment.ml}{ocaml}
+\programme{sortFirst.ml}{ocaml}
+\programme{spread.ml}{ocaml}
+\programme{experimentSpreadingRandom.ml}{ocaml}
+\programme{experimentSpreadingDegree.ml}{ocaml}
+\programme{experimentSpreadingBetween.ml}{ocaml}
+\programme{drawExperimentSpreadingRandom.py}{python}
+\programme{drawExperimentSpreadingRandomInitial.py}{python}
+\programme{drawExperimentSpreadingDegreeInitial.py}{python}
 \end{document}

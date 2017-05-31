@@ -7,5 +7,5 @@
 \contentsline {section}{\numberline {6}experimentSpreadingDegree.ml}{9}
 \contentsline {section}{\numberline {7}experimentSpreadingBetween.ml}{11}
 \contentsline {section}{\numberline {8}drawExperimentSpreadingRandom.py}{14}
-\contentsline {section}{\numberline {9}drawExperimentSpreadingRandom\_initial.py}{15}
-\contentsline {section}{\numberline {10}drawExperimentSpreadingDegree\_initial.py}{17}
+\contentsline {section}{\numberline {9}drawExperimentSpreadingRandomInitial.py}{15}
+\contentsline {section}{\numberline {10}drawExperimentSpreadingDegreeInitial.py}{17}
