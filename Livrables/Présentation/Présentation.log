@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Arch Linux) (preloaded format=xelatex 2017.5.7)  28 MAY 2017 17:01
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Arch Linux) (preloaded format=xelatex 2017.5.7)  31 MAY 2017 12:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -962,20 +962,192 @@ LaTeX Info: Redefining \- on input line 3807.
 . Defining command \liningnums with sig. 'm' on line 3906.
 .................................................
 ))
-(/usr/share/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2016/08/10 v1.14 Data Visualization (1.14)
+
+(/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box70
+)
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen278
+\pgf@nodesepend=\dimen279
+)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+))
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen280
+\pgffor@skip=\dimen281
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
+))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
+x
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count267
+\pgfplotmarksize=\dimen282
+)
+\tikz@lastx=\dimen283
+\tikz@lasty=\dimen284
+\tikz@lastxsaved=\dimen285
+\tikz@lastysaved=\dimen286
+\tikzleveldistance=\dimen287
+\tikzsiblingdistance=\dimen288
+\tikz@figbox=\box71
+\tikz@figbox@bg=\box72
+\tikz@tempbox=\box73
+\tikz@tempbox@bg=\box74
+\tikztreelevel=\count268
+\tikznumberofchildren=\count269
+\tikznumberofcurrentchild=\count270
+\tikz@fig@count=\count271
+ (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count272
+\pgfmatrixcurrentcolumn=\count273
+\pgf@matrix@numberofcolumns=\count274
+)
+\tikz@expandcount=\count275
+
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+topaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks45
+\t@pgfplots@tokb=\toks46
+\t@pgfplots@tokc=\toks47
+\pgfplots@tmpa=\dimen289
+\c@pgfplots@coordindex=\count276
+\c@pgfplots@scanlineindex=\count277
+
+(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_l
+oader.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_p
+gflibraryfpu.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_p
+gfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count278
+))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
+.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
+ext.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.te
+x
+\c@pgfplotsarray@tmp=\count279
+)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.t
+ex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.t
+ex
+\c@pgfplotstable@counta=\count280
+\t@pgfplotstable@a=\toks48
+)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading
+.code.tex
+\c@pgfplotslibrarysurf@no=\count281
+
+(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.
+pgfsys-xetex.def
+(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.
+pgfsys-dvipdfmx.def
+\c@pgfplotslibrarysurf@streamlen=\count282
+))))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen290
+\pgfdecoratedremainingdistance=\dimen291
+\pgfdecoratedinputsegmentcompleteddistance=\dimen292
+\pgfdecoratedinputsegmentremainingdistance=\dimen293
+\pgf@decorate@distancetomove=\dimen294
+\pgf@decorate@repeatstate=\count283
+\pgfdecorationsegmentamplitude=\dimen295
+\pgfdecorationsegmentlength=\dimen296
+)
+\tikz@lib@dec@box=\box75
+)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathmorphing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathmorphing.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathreplacing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathreplacing.code.tex))
+\pgfplots@numplots=\count284
+\pgfplots@xmin@reg=\dimen297
+\pgfplots@xmax@reg=\dimen298
+\pgfplots@ymin@reg=\dimen299
+\pgfplots@ymax@reg=\dimen300
+\pgfplots@zmin@reg=\dimen301
+\pgfplots@zmax@reg=\dimen302
+)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+plotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
+))) (/usr/share/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
 (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count267
-\calc@Bcount=\count268
-\calc@Adimen=\dimen278
-\calc@Bdimen=\dimen279
+\calc@Acount=\count285
+\calc@Bcount=\count286
+\calc@Adimen=\dimen303
+\calc@Bdimen=\dimen304
 \calc@Askip=\skip63
 \calc@Bskip=\skip64
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count269
+\calc@Ccount=\count287
 \calc@Cskip=\skip65
 )
 (/usr/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
@@ -985,15 +1157,15 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count270
-\l_MT_multwidth_dim=\dimen280
+\g_MT_multlinerow_int=\count288
+\l_MT_multwidth_dim=\dimen305
 \origjot=\skip66
-\l_MT_shortvdotswithinadjustabove_dim=\dimen281
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen282
-\l_MT_above_intertext_sep=\dimen283
-\l_MT_below_intertext_sep=\dimen284
-\l_MT_above_shortintertext_sep=\dimen285
-\l_MT_below_shortintertext_sep=\dimen286
+\l_MT_shortvdotswithinadjustabove_dim=\dimen306
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen307
+\l_MT_above_intertext_sep=\dimen308
+\l_MT_below_intertext_sep=\dimen309
+\l_MT_above_shortintertext_sep=\dimen310
+\l_MT_below_shortintertext_sep=\dimen311
 )
 (/usr/share/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2016/04/23 3.9r The Babel package
@@ -1003,15 +1175,15 @@ Language: frenchb 2017/01/30 v3.2g French support from the babel system
 
 (/usr/share/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/04/23 3.9r Babel common definitions
-\babel@savecnt=\count271
-\U@D=\dimen287
+\babel@savecnt=\count289
+\U@D=\dimen312
 
 (/usr/share/texmf-dist/tex/generic/babel/xebabel.def)
 LaTeX Info: Redefining \textlatin on input line 1448.
 )
 \l@acadian = a dialect from \language\l@french 
 \l@canadien = a dialect from \language\l@french 
-\FB@nonchar=\count272
+\FB@nonchar=\count290
 \FBcolonskip=\skip67
 \FBthinskip=\skip68
 Package frenchb.ldf Info: No need for active punctuation characters
@@ -1024,25 +1196,25 @@ Package frenchb.ldf Info: No need for active punctuation characters
 \FB@guilf=\XeTeXcharclass5
 \FB@guilnul=\XeTeXcharclass6
 \FBguillskip=\skip69
-\FBguill@level=\count273
-\FB@everypar=\toks43
-\FB@Mht=\dimen288
+\FBguill@level=\count291
+\FB@everypar=\toks49
+\FB@Mht=\dimen313
 LaTeX Info: Redefining \degres on input line 725.
-\mc@charclass=\count274
-\mc@charfam=\count275
-\mc@charslot=\count276
-\std@mcc=\count277
-\dec@mcc=\count278
+\mc@charclass=\count292
+\mc@charfam=\count293
+\mc@charslot=\count294
+\std@mcc=\count295
+\dec@mcc=\count296
 \listindentFB=\skip70
 \descindentFB=\skip71
 \labelwidthFB=\skip72
 \leftmarginFB=\skip73
-\parindentFFN=\dimen289
+\parindentFFN=\dimen314
 \FBfnindent=\skip74
 ))
 (/usr/share/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 Package frenchb.ldf Info: No list customisation for the beamer class,
-(frenchb.ldf)             reported on input line 41.
+(frenchb.ldf)             reported on input line 42.
 
 (/usr/share/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
@@ -1050,15 +1222,15 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen290
-\captionmargin@=\dimen291
-\captionwidth=\dimen292
-\caption@tempdima=\dimen293
-\caption@indent=\dimen294
-\caption@parindent=\dimen295
-\caption@hangindent=\dimen296
+\captionmargin=\dimen315
+\captionmargin@=\dimen316
+\captionwidth=\dimen317
+\caption@tempdima=\dimen318
+\caption@indent=\dimen319
+\caption@parindent=\dimen320
+\caption@hangindent=\dimen321
 )
-\c@ContinuedFloat=\count279
+\c@ContinuedFloat=\count297
 Package caption Info: beamer document class.
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
@@ -1070,17 +1242,17 @@ Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
 )
-\c@defi=\count280
-\c@theo=\count281
-\c@prop=\count282
-\c@ex=\count283
+\c@defi=\count298
+\c@theo=\count299
+\c@prop=\count300
+\c@ex=\count301
 
 (/usr/share/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Invalid UTF-8 byte or sequence at line 275 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 290 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 540 replaced by U+FFFD.
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
-\c@AlgoLine=\count284
+\c@AlgoLine=\count302
 
 (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -1111,32 +1283,32 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \skiplength=\skip81
 \algomargin=\skip82
 \skipalgocfslide=\skip83
-\algowidth=\dimen297
-\inoutsize=\dimen298
-\inoutindent=\dimen299
-\interspacetitleruled=\dimen300
-\interspacealgoruled=\dimen301
-\interspacetitleboxruled=\dimen302
+\algowidth=\dimen322
+\inoutsize=\dimen323
+\inoutindent=\dimen324
+\interspacetitleruled=\dimen325
+\interspacealgoruled=\dimen326
+\interspacetitleboxruled=\dimen327
 \algocf@ruledwidth=\skip84
-\algocf@inoutbox=\box70
-\algocf@inputbox=\box71
+\algocf@inoutbox=\box76
+\algocf@inputbox=\box77
 \AlCapSkip=\skip85
 \AlCapHSkip=\skip86
 \algoskipindent=\skip87
-\algocf@nlbox=\box72
-\algocf@hangingbox=\box73
-\algocf@untilbox=\box74
+\algocf@nlbox=\box78
+\algocf@hangingbox=\box79
+\algocf@untilbox=\box80
 \algocf@skipuntil=\skip88
-\algocf@capbox=\box75
+\algocf@capbox=\box81
 \algoheightruledefault=\skip89
 \algoheightrule=\skip90
 \algotitleheightruledefault=\skip91
 \algotitleheightrule=\skip92
-\c@algocfline=\count285
-\c@algocfproc=\count286
-\c@algocf=\count287
-\algocf@algoframe=\box76
-\algocf@algobox=\box77
+\c@algocfline=\count303
+\c@algocfproc=\count304
+\c@algocf=\count305
+\algocf@algoframe=\box82
+\algocf@algobox=\box83
 ))
 (/usr/share/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeMontpellier.sty
 (/usr/share/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemetree.sty))
@@ -1145,24 +1317,24 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 ) (./Présentation.aux)
 \openout1 = `Présentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1199,8 +1371,8 @@ LaTeX Font Info:    ... okay on input line 28.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box78
-Package hyperref Info: Link coloring OFF on input line 28.
+\AtBeginShipoutBox=\box84
+Package hyperref Info: Link coloring OFF on input line 41.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1208,58 +1380,58 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count288
+\c@section@level=\count306
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
 
 (./Présentation.out) (./Présentation.out)
 \@outlinefile=\write5
 \openout5 = `Présentation.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 28.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 28.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 41.
 \symnumbers=\mathgroup7
 \sympureletters=\mathgroup8
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 28.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 28.
+(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 41.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmss/bx/n on input line 28.
+(Font)                  OT1/cmr/bx/n --> TU/lmss/bx/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmss/bx/n on input line 28.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 28.
+(Font)                  OT1/cmr/bx/n --> TU/lmss/bx/n on input line 41.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 28.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/m/n on input line 28.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 28.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/m/n on input line 41.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmss/m/it on input line 28.
+(Font)                  OT1/cmr/m/it --> TU/lmss/m/it on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmss/m/it on input line 28.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 28.
+(Font)                  OT1/cmr/bx/it --> TU/lmss/m/it on input line 41.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 28.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 28.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 41.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  TU/lmss/m/n --> TU/lmss/bx/n on input line 28.
+(Font)                  TU/lmss/m/n --> TU/lmss/bx/n on input line 41.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  TU/lmss/m/it --> TU/lmss/bx/it on input line 28.
+(Font)                  TU/lmss/m/it --> TU/lmss/bx/it on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmr/bx/n on input line 28.
+(Font)                  OT1/cmss/bx/n --> TU/lmr/bx/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  TU/lmss/bx/n --> TU/lmss/bx/n on input line 28.
+(Font)                  TU/lmss/bx/n --> TU/lmss/bx/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/lmss/m/n --> TU/lmss/bx/n on input line 28.
+(Font)                  TU/lmss/m/n --> TU/lmss/bx/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/lmss/m/it --> TU/lmss/bx/it on input line 28.
+(Font)                  TU/lmss/m/it --> TU/lmss/bx/it on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/lmtt/m/n --> TU/lmtt/bx/n on input line 28.
+(Font)                  TU/lmtt/m/n --> TU/lmtt/bx/n on input line 41.
 
 (/usr/share/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-dicti
 onary/translator-basic-dictionary-English.dict
@@ -1285,7 +1457,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 tionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 28.
+LaTeX Info: Redefining \includegraphics on input line 41.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -1293,76 +1465,75 @@ LaTeX Info: Redefining \includegraphics on input line 28.
 .................................................
 \symlegacymaths=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 28.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 28.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 28.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 28.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 28.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 28.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 28.
-LaTeX Font Info:    Redeclaring math accent \check on input line 28.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 28.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 28.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 28.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 28.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 28.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 28.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 28.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 28.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 28.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 28.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 28.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 28.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 28.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 28.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 28.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 41.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 41.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 41.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 41.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 41.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 41.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 41.
+LaTeX Font Info:    Redeclaring math accent \check on input line 41.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 41.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 41.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 41.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 41.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 28.
+(Font)              `operators' in the math version `normal' on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 28.
+(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 41.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 28.
+(Font)              `operators' in the math version `bold' on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmr/m/n on input line 28.
+(Font)                  OT1/cmss/bx/n --> TU/lmr/m/n on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 28.
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 28.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 41.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  TU/lmss/m/it --> TU/lmr/m/it on input line 28.
+(Font)                  TU/lmss/m/it --> TU/lmr/m/it on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  TU/lmss/bx/n --> TU/lmr/bx/n on input line 28.
+(Font)                  TU/lmss/bx/n --> TU/lmr/bx/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  TU/lmss/m/n --> TU/lmss/m/n on input line 28.
+(Font)                  TU/lmss/m/n --> TU/lmss/m/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  TU/lmtt/m/n --> TU/lmtt/m/n on input line 28.
+(Font)                  TU/lmtt/m/n --> TU/lmtt/m/n on input line 41.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/bx/n on input line 28.
+(Font)                  TU/lmr/m/n --> TU/lmr/bx/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/lmss/bx/it --> TU/lmr/bx/it on input line 28.
+(Font)                  TU/lmss/bx/it --> TU/lmr/bx/it on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/lmss/bx/n --> TU/lmss/bx/n on input line 28.
+(Font)                  TU/lmss/bx/n --> TU/lmss/bx/n on input line 41.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/lmtt/bx/n --> TU/lmtt/bx/n on input line 28.
-LaTeX Info: Redefining \dots on input line 28.
-LaTeX Info: Redefining \up on input line 28.
+(Font)                  TU/lmtt/bx/n --> TU/lmtt/bx/n on input line 41.
+
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.14} into 
+your preamble.
+ on input line 41.
+
+LaTeX Info: Redefining \dots on input line 41.
+LaTeX Info: Redefining \up on input line 41.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- (./Présentation.nav)
-[1
+(./Présentation.nav) [1
 
-] (./Présentation.toc)
-Overfull \vbox (20.26978pt too high) detected at line 34
- []
-
-[2
+] (./Présentation.toc) [2
 
 ] [3
 
 ] (./Présentation.toc)
-Overfull \vbox (74.6698pt too high) detected at line 42
- []
-
 [4
 
 ] [5
@@ -1380,23 +1551,25 @@ Overfull \vbox (74.6698pt too high) detected at line 42
 ] [11
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 83.
+LaTeX Font Info:    Try loading font information for U+msa on input line 96.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 83.
+LaTeX Font Info:    Try loading font information for U+msb on input line 96.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 83.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 96.
 
 (/usr/share/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <8> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 83.
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 83.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 96.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <7> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 96.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <5> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 96.
  [12
 
 ] [13
@@ -1416,7 +1589,11 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6> not available
 
 ]
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <12> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 106.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 119.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <8> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 119.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 119.
  [20
 
 ] [21
@@ -1433,46 +1610,20 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <12> not available
 
 ] [27
 
-] (./Présentation.toc)
-Overfull \vbox (20.26978pt too high) detected at line 139
- []
+] (./Présentation.toc) [28
 
-[28
+] [29
 
-]
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 162.
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <7> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 162.
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <5> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 162.
- [29
+] (./WS_1.tex) [30
 
-]
-Invalid UTF-8 byte or sequence at line 168 replaced by U+FFFD.
-File: WS_1.eps Graphic file (type eps)
- <WS_1.eps> [30
+] (./WS_2.tex) [31
 
-]
-Invalid UTF-8 byte or sequence at line 175 replaced by U+FFFD.
-File: WS_2.eps Graphic file (type eps)
- <WS_2.eps> [31
+] (./WS_3.tex) [32
 
-]
-Invalid UTF-8 byte or sequence at line 182 replaced by U+FFFD.
-File: WS_3.eps Graphic file (type eps)
- <WS_3.eps> [32
+] (./WS_4.tex)
+[33
 
-]
-Invalid UTF-8 byte or sequence at line 189 replaced by U+FFFD.
-File: WS_4.eps Graphic file (type eps)
- <WS_4.eps> [33
-
-]
-Invalid UTF-8 byte or sequence at line 196 replaced by U+FFFD.
-File: WS_5.eps Graphic file (type eps)
-
-<WS_5.eps> [34
+] (./WS_5.tex) [34
 
 ] [35
 
@@ -1484,78 +1635,81 @@ File: WS_5.eps Graphic file (type eps)
 
 ] [39
 
-] (./Présentation.toc)
-Overfull \vbox (47.46979pt too high) detected at line 211
- []
+] (./Présentation.toc) [40
 
-[40
-
-] [41
+]
+[41
 
 ] [42
 
 ]
-File: resultats/random_finale_f_initiale_q50_Beta50_ec.png Graphic file (type Q
-Tm)
- <use  "resultats/random_finale_f_initiale_q50_Beta50_ec.png" >
+(../../generationDeGraph/resultats/random_finale_f_initiale_q50_Beta50_ec.tex)
+Overfull \vbox (12.71361pt too high) detected at line 216
+ []
+
 [43
 
 ]
-File: resultats/random_finale_f_initiale_q50_Beta0_ec.png Graphic file (type QT
-m)
- <use  "resultats/random_finale_f_initiale_q50_Beta0_ec.png" >
+(../../generationDeGraph/resultats/random_finale_f_initiale_q50_Beta0_ec.tex)
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 271.
- [44
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 225.
 
-]
-File: resultats/random_finale_f_initiale_q50_Beta25_ec.png Graphic file (type Q
-Tm)
-
-<use  "resultats/random_finale_f_initiale_q50_Beta25_ec.png" > [45
-
-]
-File: resultats/random_finale_f_initiale_q50_Beta50_ec.png Graphic file (type Q
-Tm)
-
-<use  "resultats/random_finale_f_initiale_q50_Beta50_ec.png" > [46
-
-]
-File: resultats/random_finale_f_initiale_q50_Beta75_ec.png Graphic file (type Q
-Tm)
-
-<use  "resultats/random_finale_f_initiale_q50_Beta75_ec.png" > [47
-
-]
-File: resultats/random_finale_f_initiale_q50_Beta100_ec.png Graphic file (type 
-QTm)
-
-<use  "resultats/random_finale_f_initiale_q50_Beta100_ec.png" > [48
-
-]
-File: resultats/random_finale_f_initiale_q25_Beta50_ec.png Graphic file (type Q
-Tm)
-
-<use  "resultats/random_finale_f_initiale_q25_Beta50_ec.png" > [49
-
-]
-File: resultats/random_finale_f_initiale_q50_Beta50_ec.png Graphic file (type Q
-Tm)
-
-<use  "resultats/random_finale_f_initiale_q50_Beta50_ec.png" > [50
-
-]
-File: resultats/random_finale_f_initiale_q75_Beta50_ec.png Graphic file (type Q
-Tm)
-
-<use  "resultats/random_finale_f_initiale_q75_Beta50_ec.png" > [51
-
-]
-(./Présentation.toc)
-Overfull \vbox (20.26978pt too high) detected at line 303
+Overfull \vbox (12.7144pt too high) detected at line 225
  []
 
-[52
+[44
+
+]
+(../../generationDeGraph/resultats/random_finale_f_initiale_q50_Beta25_ec.tex)
+Overfull \vbox (12.71457pt too high) detected at line 225
+ []
+
+[45
+
+]
+(../../generationDeGraph/resultats/random_finale_f_initiale_q50_Beta50_ec.tex)
+Overfull \vbox (12.71361pt too high) detected at line 225
+ []
+
+[46
+
+]
+(../../generationDeGraph/resultats/random_finale_f_initiale_q50_Beta75_ec.tex)
+Overfull \vbox (12.71521pt too high) detected at line 225
+ []
+
+[47
+
+]
+(../../generationDeGraph/resultats/random_finale_f_initiale_q50_Beta100_ec.tex)
+
+Overfull \vbox (12.7147pt too high) detected at line 225
+ []
+
+[48
+
+]
+(../../generationDeGraph/resultats/random_finale_f_initiale_q25_Beta50_ec.tex)
+Overfull \vbox (12.7136pt too high) detected at line 232
+ []
+
+[49
+
+]
+(../../generationDeGraph/resultats/random_finale_f_initiale_q50_Beta50_ec.tex)
+Overfull \vbox (12.71361pt too high) detected at line 232
+ []
+
+[50
+
+]
+(../../generationDeGraph/resultats/random_finale_f_initiale_q75_Beta50_ec.tex)
+Overfull \vbox (12.7135pt too high) detected at line 232
+ []
+
+[51
+
+] (./Présentation.toc) [52
 
 ] [53
 
@@ -1563,29 +1717,18 @@ Overfull \vbox (20.26978pt too high) detected at line 303
 
 ] [55
 
-] (./Présentation.toc)
-Overfull \vbox (20.26978pt too high) detected at line 317
- []
+] (./Présentation.toc) [56
 
-[56
-
-] [57
+]
+[57
 
 ] [58
 
 ] [59
 
-] (./Présentation.toc)
-Overfull \vbox (47.46979pt too high) detected at line 331
- []
+] (./Présentation.toc) [60
 
-[60
-
-] (./Présentation.toc)
-Overfull \vbox (20.26978pt too high) detected at line 335
- []
-
-[61
+] (./Présentation.toc) [61
 
 ]
 \tf@nav=\write6
@@ -1597,23 +1740,24 @@ Overfull \vbox (20.26978pt too high) detected at line 335
 \tf@snm=\write8
 \openout8 = `Présentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 338.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 338.
- (./Présentation.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 338.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 338.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 269.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 269.
+
+(./Présentation.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 269.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 269.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 32914 strings out of 493068
- 636440 string characters out of 6141029
- 744946 words of memory out of 5000000
- 36283 multiletter control sequences out of 15000+600000
- 15285 words of font info for 88 fonts, out of 8000000 for 9000
+ 45947 strings out of 493068
+ 1043435 string characters out of 6141029
+ 1314438 words of memory out of 5000000
+ 49097 multiletter control sequences out of 15000+600000
+ 13541 words of font info for 82 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 56i,21n,55p,10431b,3708s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,21n,113p,10412b,5172s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Présentation.pdf (61 pages).

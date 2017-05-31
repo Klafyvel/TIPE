@@ -31,7 +31,7 @@ for a,b in [(1,1), (1,3), (3,1)]:
         
         for x in X:
             cursor = conn.execute(
-                "SELECT value FROM r_spreading_random_"+
+                "SELECT value FROM r_spreading_degree_"+
                 "{graph_size}_{beta}_{k}_{nb_gen}_{x}_{max_spread_step}_{a}_{b}"
                 .format(**locals()))
             rows = cursor.fetchall()
@@ -49,15 +49,13 @@ for a,b in [(1,1), (1,3), (3,1)]:
             Y_high[x] = Y[x] + v
             Y_low[x] = Y[x] - v
         
-        pl.grid()
-
         pl.plot(X,Y[1:], 'b', label="Propagation finale", lw=2.5)
         pl.plot(X,X/100, 'g--', label="Identité", lw=2.5)
         pl.plot(X, Y_high[1:], 'r--', label="Écart-type", lw=2.5)
-        pl.plot(X, Y_low[1:], 'r--', lw=2.5)
+        pl.plot(X, Y_low[1:], 'r--')
+        
         pl.axvline(x_50, c='orange', lw=2.5)
         pl.axhline(0.5, xmin=0, xmax=100, c='orange', lw=2.5)
-        
         pl.text(x_50+1, 0.1, str(x_50)+" \\%",
             bbox=dict(facecolor='orange', alpha=0.95), 
             size="large",
@@ -65,6 +63,8 @@ for a,b in [(1,1), (1,3), (3,1)]:
             fontweight="bold")
         
         pl.legend(loc="lower right")
-        tikz_save("resultats/random_finale_f_initiale_q{}_Beta{}_ec.tex"
+        pl.grid()
+        tikz_save("resultats/degree_finale_f_initiale_q{}_Beta{}_ec.tex"
             .format(int(b/(a+b)*100), beta))
+
 conn.close()

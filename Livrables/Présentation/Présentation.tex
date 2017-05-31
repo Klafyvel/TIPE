@@ -11,14 +11,27 @@
 \setbeamercolor{block body}{fg=black,bg=blue!25}      % corps block normal
 \setbeamercolor{block body alerted}{fg=white,bg=red}   % idem pour un block alerte
 
+\newcommand{\resultat}[1]{
+  \fontsize{8}{10}\selectfont
+  \begin{center}
+  \input{../../generationDeGraph/resultats/#1}
+  \end{center}
+}
+\newcommand{\illustration}[1]{
+  \fontsize{8}{10}\selectfont
+  \begin{center}
+  \input{#1}
+  \end{center}
+}
 % Faire apparaître un sommaire avant chaque section
 \AtBeginSection[]{
-   \begin{frame}
-   \begin{center}{\Large Plan }\end{center}
-   %%% affiche en début de chaque section, les noms de sections et
-   %%% noms de sous-sections de la section en cours.
-   \tableofcontents[currentsection,hideothersubsections]
-   \end{frame} 
+  \fontsize{10}{11}\selectfont
+  \begin{frame}
+  \begin{center}{\Large Plan }\end{center}
+  %%% affiche en début de chaque section, les noms de sections et
+  %%% noms de sous-sections de la section en cours.
+  \tableofcontents[hideallsubsections]
+  \end{frame} 
 }
 
 \title[Propagation de rumeurs dans un réseau social]{TIPE : Propagation de rumeurs dans un réseau social} 
@@ -162,38 +175,13 @@
 \end{frame} 
 \begin{frame}
   \frametitle{Algorithme de Watts-Strogatz}
-  \begin{figure}[H]
-    \includegraphics[scale=0.5]{WS_1.eps}
-  \end{figure}
+  \only<1-1>{\illustration{WS_1}}
+  \only<2-2>{\illustration{WS_2}}
+  \only<3-3>{\illustration{WS_3}}
+  \only<4-4>{\illustration{WS_4}}
+  \only<5-5>{\illustration{WS_5}}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Algorithme de Watts-Strogatz}
-  \begin{figure}[H]
-    \includegraphics[scale=0.5]{WS_2.eps}
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Algorithme de Watts-Strogatz}
-  \begin{figure}[H]
-    \includegraphics[scale=0.5]{WS_3.eps}
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Algorithme de Watts-Strogatz}
-  \begin{figure}[H]
-    \includegraphics[scale=0.5]{WS_4.eps}
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Algorithme de Watts-Strogatz}
-  \begin{figure}[H]
-    \includegraphics[scale=0.5]{WS_5.eps}
-  \end{figure}
-\end{frame}
 
 \begin{frame}
   \frametitle{Réseaux simulés}
@@ -224,80 +212,23 @@
 \subsection{Proportion atteinte en fonction de la proportion initiale}
 \begin{frame}
   \frametitle{Courbe type}
-  \begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta50_ec.png}
-  \end{center}
-  \end{figure}
+  \resultat{random_finale_f_initiale_q50_Beta50_ec}
 \end{frame}
 
 \begin{frame}
   \frametitle{Faible influence du paramètre $\beta$}
-  \only<1-1> {
-  \begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta0_ec.png}
-  \end{center}
-  \end{figure}
-  }
-  \only<2-2> {
-  \begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta25_ec.png}
-  \end{center}
-  \end{figure}
-  }
-  \only<3-3> {
-  \begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta50_ec.png}
-  \end{center}
-  \end{figure}
-  }
-  \only<4-4> {
-  \begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta75_ec.png}
-  \end{center}
-  \end{figure}
-  }
-  \only<5-5> {
-  \begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta100_ec.png}
-  \end{center}
-  \end{figure}
-  }
+  \only<1-1> {\resultat{random_finale_f_initiale_q50_Beta0_ec}}
+  \only<2-2> {\resultat{random_finale_f_initiale_q50_Beta25_ec}}
+  \only<3-3> {\resultat{random_finale_f_initiale_q50_Beta50_ec}}
+  \only<4-4> {\resultat{random_finale_f_initiale_q50_Beta75_ec}}
+  \only<5-5> {\resultat{random_finale_f_initiale_q50_Beta100_ec}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Influence de $q$}
-  \only<1-1>{
-  \begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q25_Beta50_ec.png}
-  \end{center}
-  \end{figure}
-  }
-  \only<2-2>{
-  \begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q50_Beta50_ec.png}
-  \end{center}
-  \end{figure}
-  }
-  \only<3-3>{
-  \begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/random_finale_f_initiale_q75_Beta50_ec.png}
-  \end{center}
-  \end{figure}
-  }
-  % \begin{figure}[H]
-  % \begin{center}
-    % \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{resultats/comp_random_beta50.png}
-  % \end{center}
-  % \end{figure}
+  \only<1-1>{\resultat{random_finale_f_initiale_q25_Beta50_ec}}
+  \only<2-2>{\resultat{random_finale_f_initiale_q50_Beta50_ec}}
+  \only<3-3>{\resultat{random_finale_f_initiale_q75_Beta50_ec}}
 \end{frame}
 
 \section{Expérience 2}

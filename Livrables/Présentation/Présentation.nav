@@ -37,17 +37,9 @@
 \headcommand {\beamer@framepages {28}{28}}
 \headcommand {\slideentry {3}{0}{2}{29/29}{}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\slideentry {3}{0}{3}{30/30}{}{0}}
-\headcommand {\beamer@framepages {30}{30}}
-\headcommand {\slideentry {3}{0}{4}{31/31}{}{0}}
-\headcommand {\beamer@framepages {31}{31}}
-\headcommand {\slideentry {3}{0}{5}{32/32}{}{0}}
-\headcommand {\beamer@framepages {32}{32}}
-\headcommand {\slideentry {3}{0}{6}{33/33}{}{0}}
-\headcommand {\beamer@framepages {33}{33}}
-\headcommand {\slideentry {3}{0}{7}{34/34}{}{0}}
-\headcommand {\beamer@framepages {34}{34}}
-\headcommand {\slideentry {3}{0}{8}{35/39}{}{0}}
+\headcommand {\slideentry {3}{0}{3}{30/34}{}{0}}
+\headcommand {\beamer@framepages {30}{34}}
+\headcommand {\slideentry {3}{0}{4}{35/39}{}{0}}
 \headcommand {\beamer@framepages {35}{39}}
 \headcommand {\sectionentry {4}{Expérience 1}{40}{Expérience 1}{0}}
 \headcommand {\beamer@sectionpages {28}{39}}
@@ -98,4 +90,4 @@
 \headcommand {\beamer@subsectionpages {61}{61}}
 \headcommand {\beamer@sectionpages {61}{61}}
 \headcommand {\beamer@documentpages {61}}
-\headcommand {\def \inserttotalframenumber {32}}
+\headcommand {\def \inserttotalframenumber {28}}

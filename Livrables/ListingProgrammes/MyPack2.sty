@@ -123,11 +123,11 @@
 %%%%%%%% INTIALISATION DE LA PAGE %%%%%%%%%
 
 \RequirePackage{fancyhdr}
-\newcommand{\initPage}[1][ ]{
+\newcommand\initPage[3]{
 	\pagestyle{fancy}
-	\fancyhead{}
-	\lhead{#1}
-	\rhead{\today}
+	\fancyhead{#1}
+	\lhead{#2}
+	\rhead{#3}
 	\rfoot{}
 	\lfoot{}
 
