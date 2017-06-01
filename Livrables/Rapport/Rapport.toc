@@ -1,0 +1,10 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Préambule}{2}
+\contentsline {section}{\numberline {2}Introduction}{2}
+\contentsline {section}{\numberline {3}Propagation de rumeurs}{2}
+\contentsline {subsection}{\numberline {3.1}Modalités d'action}{2}
+\contentsline {subsubsection}{\numberline {3.1.1}Étude théorique}{2}
+\contentsline {subsubsection}{\numberline {3.1.2}Génération des graphes}{3}
+\contentsline {subsection}{\numberline {3.2}Résultats}{4}
+\contentsline {subsection}{\numberline {3.3}Analyse, exploitation et discussion}{4}
+\contentsline {section}{\numberline {4}Conclusion}{4}
