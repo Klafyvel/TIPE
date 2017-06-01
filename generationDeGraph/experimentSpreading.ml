@@ -36,7 +36,7 @@ let save_step db e exp_name=
   Experiment.change_last_id db exp_name e.graph_no
 ;;
 
-let process db graph_size nb_gen k beta max_spread_step a b choose_spread name=
+let process ?(max=99) db graph_size nb_gen k beta max_spread_step a b choose_spread name=
   let step i init= 
     let g = Graph.wattsStrogatzMatrix graph_size k beta in
     let prop_spread = Array.create max_spread_step 0.0 in
@@ -67,7 +67,7 @@ let process db graph_size nb_gen k beta max_spread_step a b choose_spread name=
       save_step db !cur_step exp_name
     done;
   in
-  for i = 1 to 99 do
+  for i = 1 to max do
     experiment i db;
   done
 ;;
