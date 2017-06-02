@@ -4,19 +4,18 @@ import numpy as np
 import sqlite3
 import json
 
-# r_spreading_between_500_50_50_50_25_500_2_1
 graph_size = 500
-nb_gen = 50
+nb_gen = 100
 k = 50
 max_spread_step = 500
 conn = sqlite3.connect('experiments.sqlite')
-beta = 50
+beta = 75
 
-# size = 100
-# l = [(1,1), (1,3), (3,1)]
+size = 100
+l = [(1,1), (1,3), (3,1)]
 
-size = 50
-l = [(2,1)]
+# size = 50
+# l = [(2,1)]
 
 for a,b in l:
     X = np.arange(1,size)
@@ -59,10 +58,13 @@ for a,b in l:
             Y_low[i][x] = Y[i][x] - v
 
         pl.plot(X,Y[i][1:], label="Propagation finale {}".format(corres[i]), lw=2.5)
+
+    for i in range(3):
+        pl.plot(X, Y_high[i][1:], 'r--', lw=2)
+        pl.plot(X, Y_low[i][1:], 'r--', lw=2)
     pl.axhline(0.5, xmin=0, xmax=100, c='orange', lw=2.5)
     pl.legend(loc="lower right")
-    tikz_save("resultats/all_finale_f_initiale_q{}_Beta{}_ec.tex"
-        .format(int(b/(a+b)*100), beta))
-    pl.plot()
+    # tikz_save("resultats/all_finale_f_initiale_q{}_Beta{}_ec.tex"
+    #     .format(int(b/(a+b)*100), beta))
     pl.show()
 conn.close()

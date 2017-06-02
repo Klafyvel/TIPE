@@ -41,53 +41,58 @@
 \headcommand {\beamer@framepages {30}{34}}
 \headcommand {\slideentry {3}{0}{4}{35/39}{}{0}}
 \headcommand {\beamer@framepages {35}{39}}
-\headcommand {\sectionentry {4}{Expérience 1}{40}{Expérience 1}{0}}
+\headcommand {\sectionentry {4}{Expériences}{40}{Expériences}{0}}
 \headcommand {\beamer@sectionpages {28}{39}}
 \headcommand {\beamer@subsectionpages {28}{39}}
 \headcommand {\slideentry {4}{0}{1}{40/40}{}{0}}
 \headcommand {\beamer@framepages {40}{40}}
-\headcommand {\slideentry {4}{0}{2}{41/42}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{41}{Expérience 1}}\headcommand {\beamer@subsectionpages {40}{40}}
+\headcommand {\slideentry {4}{1}{1}{41/42}{Expérience 1}{0}}
 \headcommand {\beamer@framepages {41}{42}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{43}{Courbes de propagation}}\headcommand {\beamer@subsectionpages {40}{42}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{43}{Proportion atteinte en fonction de la proportion initiale}}\headcommand {\beamer@subsectionpages {43}{42}}
-\headcommand {\slideentry {4}{2}{1}{43/43}{Proportion atteinte en fonction de la proportion initiale}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{43}{Courbes de propagation}}\headcommand {\beamer@subsectionpages {41}{42}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{43}{Proportion atteinte en fonction de la proportion initiale}}\headcommand {\beamer@subsectionpages {43}{42}}
+\headcommand {\slideentry {4}{3}{1}{43/43}{Proportion atteinte en fonction de la proportion initiale}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\slideentry {4}{2}{2}{44/48}{Proportion atteinte en fonction de la proportion initiale}{0}}
+\headcommand {\slideentry {4}{3}{2}{44/48}{Proportion atteinte en fonction de la proportion initiale}{0}}
 \headcommand {\beamer@framepages {44}{48}}
-\headcommand {\slideentry {4}{2}{3}{49/51}{Proportion atteinte en fonction de la proportion initiale}{0}}
+\headcommand {\slideentry {4}{3}{3}{49/51}{Proportion atteinte en fonction de la proportion initiale}{0}}
 \headcommand {\beamer@framepages {49}{51}}
-\headcommand {\sectionentry {5}{Expérience 2}{52}{Expérience 2}{0}}
-\headcommand {\beamer@sectionpages {40}{51}}
-\headcommand {\beamer@subsectionpages {43}{51}}
-\headcommand {\slideentry {5}{0}{1}{52/52}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{52}{Expérience 2}}\headcommand {\beamer@subsectionpages {43}{51}}
+\headcommand {\slideentry {4}{4}{1}{52/52}{Expérience 2}{0}}
 \headcommand {\beamer@framepages {52}{52}}
-\headcommand {\slideentry {5}{0}{2}{53/53}{}{0}}
-\headcommand {\beamer@framepages {53}{53}}
-\headcommand {\slideentry {5}{0}{3}{54/55}{}{0}}
-\headcommand {\beamer@framepages {54}{55}}
-\headcommand {\sectionentry {6}{Expérience 3}{56}{Expérience 3}{0}}
-\headcommand {\beamer@sectionpages {52}{55}}
-\headcommand {\beamer@subsectionpages {52}{55}}
-\headcommand {\slideentry {6}{0}{1}{56/56}{}{0}}
-\headcommand {\beamer@framepages {56}{56}}
-\headcommand {\slideentry {6}{0}{2}{57/57}{}{0}}
-\headcommand {\beamer@framepages {57}{57}}
-\headcommand {\slideentry {6}{0}{3}{58/59}{}{0}}
-\headcommand {\beamer@framepages {58}{59}}
-\headcommand {\sectionentry {7}{Résultats}{60}{Résultats}{0}}
-\headcommand {\beamer@sectionpages {56}{59}}
-\headcommand {\beamer@subsectionpages {56}{59}}
-\headcommand {\slideentry {7}{0}{1}{60/60}{}{0}}
-\headcommand {\beamer@framepages {60}{60}}
-\headcommand {\beamer@subsectionentry {0}{7}{1}{61}{Comparaison}}\headcommand {\beamer@subsectionpages {60}{60}}
-\headcommand {\beamer@subsectionentry {0}{7}{2}{61}{Conséquences}}\headcommand {\beamer@subsectionpages {61}{60}}
-\headcommand {\sectionentry {8}{Conclusion}{61}{Conclusion}{0}}
-\headcommand {\beamer@sectionpages {60}{60}}
-\headcommand {\beamer@subsectionpages {61}{60}}
-\headcommand {\slideentry {8}{0}{1}{61/61}{}{0}}
-\headcommand {\beamer@framepages {61}{61}}
-\headcommand {\beamer@partpages {1}{61}}
-\headcommand {\beamer@subsectionpages {61}{61}}
-\headcommand {\beamer@sectionpages {61}{61}}
-\headcommand {\beamer@documentpages {61}}
-\headcommand {\def \inserttotalframenumber {28}}
+\headcommand {\slideentry {4}{4}{2}{53/54}{Expérience 2}{0}}
+\headcommand {\beamer@framepages {53}{54}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{55}{Expérience 3}}\headcommand {\beamer@subsectionpages {52}{54}}
+\headcommand {\slideentry {4}{5}{1}{55/55}{Expérience 3}{0}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\slideentry {4}{5}{2}{56/57}{Expérience 3}{0}}
+\headcommand {\beamer@framepages {56}{57}}
+\headcommand {\sectionentry {5}{Résultats}{58}{Résultats}{0}}
+\headcommand {\beamer@sectionpages {40}{57}}
+\headcommand {\beamer@subsectionpages {55}{57}}
+\headcommand {\slideentry {5}{0}{1}{58/58}{}{0}}
+\headcommand {\beamer@framepages {58}{58}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{59}{Comparaison}}\headcommand {\beamer@subsectionpages {58}{58}}
+\headcommand {\slideentry {5}{1}{1}{59/62}{Comparaison}{0}}
+\headcommand {\beamer@framepages {59}{62}}
+\headcommand {\slideentry {5}{1}{2}{63/66}{Comparaison}{0}}
+\headcommand {\beamer@framepages {63}{66}}
+\headcommand {\slideentry {5}{1}{3}{67/70}{Comparaison}{0}}
+\headcommand {\beamer@framepages {67}{70}}
+\headcommand {\slideentry {5}{1}{4}{71/71}{Comparaison}{0}}
+\headcommand {\beamer@framepages {71}{71}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{72}{Conséquences}}\headcommand {\beamer@subsectionpages {59}{71}}
+\headcommand {\slideentry {5}{2}{1}{72/75}{Conséquences}{0}}
+\headcommand {\beamer@framepages {72}{75}}
+\headcommand {\sectionentry {6}{Conclusion}{76}{Conclusion}{0}}
+\headcommand {\beamer@sectionpages {58}{75}}
+\headcommand {\beamer@subsectionpages {72}{75}}
+\headcommand {\slideentry {6}{0}{1}{76/76}{}{0}}
+\headcommand {\beamer@framepages {76}{76}}
+\headcommand {\slideentry {6}{0}{2}{77/82}{}{0}}
+\headcommand {\beamer@framepages {77}{82}}
+\headcommand {\beamer@partpages {1}{82}}
+\headcommand {\beamer@subsectionpages {76}{82}}
+\headcommand {\beamer@sectionpages {76}{82}}
+\headcommand {\beamer@documentpages {82}}
+\headcommand {\def \inserttotalframenumber {32}}
