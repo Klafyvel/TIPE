@@ -1,5 +1,19 @@
 \documentclass{article}
 \usepackage{MyPack2}
+\usepackage{pgfplots}
+\usepackage[justification=centering]{caption}
+\usepackage{placeins}
+
+\newcommand{\resultat}[2]{
+  \begin{figure}[!htb]
+  \centering
+  \input{../../generationDeGraph/resultats/#1}
+  \caption{#2}
+  \label{#1}
+  \end{figure}
+}
+\renewcommand{\topfraction}{.75}
+\renewcommand{\bottomfraction}{.75}
 
 \title{TIPE : Propagation de rumeurs dans un réseau social\\Rapport}
 \author{Hugo LEVY-FALK}
@@ -12,17 +26,17 @@
 \newpage
 
 \section{Préambule}
-Ce rapport synthétise le travail réalisé sur la propagation de rumeurs dans les réseaux sociaux. Les objectifs fixés lors de la mise en cohérence ont étés atteints, sauf en ce qui concerne l'élaboration d'un algorithme optimisant le choix des conditions initiales pour une meilleure propagation de la rumeur. Une approche théorique non prévue initialement a également été réalisée.
+Ce rapport synthétise le travail réalisé sur la propagation de rumeurs dans les réseaux sociaux. On cherche à propager le plus efficacement possible une rumeur à l'ensemble d'un réseau. Les objectifs fixés lors de la mise en cohérence ont étés atteints.
 
 \section{Introduction}
-Faisant suite à la recherche documentaire, une première approche théorique de la propagation des rumeurs, s'inspirant du livre de Easley et Kleinberg, a été réalisée. Cette approche permet de fixer le cadre des simulations ainsi que d'identifier les paramètres à faire varier lors des expériences. Dans un deuxième temps trois critères de choix des éléments propageant initialement la rumeurs ont été expérimentés en faisant varier les paramètres mis en évidence précédemment.
+Faisant suite à la recherche documentaire, une première approche théorique de la propagation des rumeurs, s'inspirant du livre de Easley et Kleinberg, a été réalisée. Cela permet de fixer le cadre des simulations ainsi que d'identifier les paramètres des expériences. Dans un deuxième temps trois critères de choix des propagateurs initiaux ont été expérimentés en faisant varier les paramètres mis en évidence précédemment.
 
 \section{Propagation de rumeurs}
 \subsection{Modalités d'action}
 \subsubsection{Étude théorique}
-L'étude théorique a consisté en la formalisation du concept de rumeur et de propagation. On modélise naturellement un réseau social par un graphe $G = (V,E)$ avec $V$ un ensemble de nœuds et $E\subset V²$ que l'on supposera connexe par la suite. Chaque membre du réseaux est modélisés par un nœud du graphe et ses liens sociaux par une arrête.
+L'étude théorique a consisté en la formalisation des concepts de rumeur et de propagation. On modélise naturellement un réseau social par un graphe $G = (V,E)$, avec $V$ un ensemble de nœuds et $E\subset V²$, que l'on supposera connexe par la suite. Chaque membre du réseau est modélisé par un nœud du graphe et ses liens sociaux par des arrêtes.
 
-Dans un premier temps, on cherche à caractériser le comportement d'un nœud du graphe. Pour cela on va considérer que le nœud peut se trouver dans deux états distincts : un premier dans lequel le nœud transmet la rumeur à tous ses voisins ($A$) et un autre dans lequel il ne relaie pas la rumeur ($B$). Pour chaque nœud $i\in V$ du graphe, si $i$ est dans l'état $A$, alors pour chacun des ses voisins dans l'état $A$, $i$ réalise un gain $a$. De même si $i$ est dans l'état $B$ il réalise un gain $b$ pour chacun de ses voisins dans l'état $B$. On procède ensuite à une simulation dans laquelle à chaque étape, tous les nœuds du graphe tentent de maximiser leur gain en choisissant ou non de passer à l'état $A$ (on n'autorise pas les passages de $A$ vers $B$).
+On cherche d'abord à caractériser le comportement d'un nœud. Pour cela on considère qu'un nœud peut se trouver dans deux états distincts : il transmet la rumeur à tous ses voisins ($A$) ou il ne relaie pas la rumeur ($B$). Pour chaque nœud $i\in V$, si $i$ est dans l'état $A$, alors pour chacun des ses voisins également dans l'état $A$, $i$ réalise un gain $a$. De même si $i$ est dans l'état $B$, il réalise un gain $b$ pour chacun de ses voisins dans l'état $B$. On procède ensuite à une simulation où, à chaque étape, tous les nœuds du graphe tentent de maximiser leur gain en choisissant ou non de passer à l'état $A$ (on n'autorise pas les passages de $A$ vers $B$).
 
 Lors d'une étape de simulation, si l'on note $p$ la proportion de voisins dans l'état $A$ du nœud $i$, alors le nœud $i$ maximise son gain en passant à l'état $A$ si $p \times a > (1-p) \times b$, ou encore $$ p > \frac{b}{a+b} = q$$ 
 
@@ -33,42 +47,43 @@ Lors d'une étape de simulation, si l'on note $p$ la proportion de voisins dans 
 
 \begin{prop}
   \label{stationnaire}
-  Si l'on pose $(V_k)_{k\in\N}$ la suite des nœuds dans l'état $A$ à l'étape $k$ de la simulation, s'il existe $n\in\N$ tel que $V_n = V_{n+1}$ alors la suite est stationnaire à partir du rang n.
+  Si l'on pose $(V_k)_{k\in\N}$ la suite des nœuds dans l'état $A$ à l'étape $k$, s'il existe $n\in\N$ tel que $V_n = V_{n+1}$ alors la suite est stationnaire à partir du rang n.
 \end{prop}
 \begin{proof}
-  En effet si $V_n = V_{n+1}$ alors chaque nœud maximise déjà son gain à l'étape $n$, la situation étant identique à l'étape $n+1$, on a $V_{n+1} = V_{n+2}$.
+  Si $V_n = V_{n+1}$ alors chaque nœud maximise déjà son gain à l'étape $n$, la situation étant identique à l'étape $n+1$, on a $V_{n+1} = V_{n+2}$.
 \end{proof}
+
+Dans la suite on pose $n=|V|$.
 
 \begin{prop}
   \label{convergente}
-  On pose $n=|V|$. La suite $(V_k)_{k\in\N}$ converge en n étape au plus.
+  La suite $(V_k)_{k\in\N}$ converge en $n$ étapes au plus.
 \end{prop}
 \begin{proof}
-  La suite $(V_k)_{k\in\N}$ étant croissante pour l'inclusion et majorée par $V$, elle converge. D'autre part, d'après la proposition \ref{stationnaire}, cette suite est stationnaire à partir du rang $k\in\N$ si $V_k = V_{k+1}$. Or il n'y a que $n$ nœuds dans le graphe, donc la suite est stationnaire à partir du rang $n$ au plus. 
+  La suite $(V_k)_{k\in\N}$ étant croissante pour l'inclusion et majorée par $V$, elle converge. D'autre part, d'après la proposition \ref{stationnaire}, elle est stationnaire à partir du rang $k\in\N$ si $V_k = V_{k+1}$. Or il n'y a que $n$ nœuds, donc la suite est stationnaire à partir du rang $n-1$ au plus. 
 \end{proof}
 
-La proposition \ref{convergente} permet d'assurer que toutes les simulations pourront être menées à bout en un temps fini. La proposition \ref{stationnaire} permet de raccourcir éventuellement la durée d'une simulation en comptant le nombre d'éléments qui passent à l'état $A$ à chaque étape de simulation. S'il est nul, alors la simulation est terminée.
+La proposition \ref{convergente} assure que toutes les simulations pourront être terminées en un temps fini. La proposition \ref{stationnaire} permet de raccourcir la durée d'une simulation en comptant le nombre d'éléments qui passent à l'état $A$ à chaque étape de simulation. S'il est nul, alors la simulation est terminée.
 
-On peut ensuite chercher un critère plus complet que la proposition \ref{impossible1} pour qualifier la possibilité de propager une rumeur.
+On cherche ensuite un critère plus complet que la proposition \ref{impossible1} pour qualifier la possibilité de propager une rumeur.
 \begin{defi}
-  On appelle $p$-cluster tout sous-ensemble $C \subset V$ tel que pour tout $i\in C$ il existe un $p$-uplet $(v_k)_{k\in \llbracket1,p\rrbracket} \in C^p$ deux à deux distincts et tel que pour tout $k\in \llbracket1,p\rrbracket$, $i$ et $v_k$ soient voisins.
+  On appelle $p$-cluster tout $C \subset V$ tel que pour $i\in C$ il existe $(v_k)_{k\in \llbracket1,p\rrbracket} \in C^p$ deux à deux distincts et tels que pour tout $k\in \llbracket1,p\rrbracket$, $i$ et $v_k$ soient voisins.
 \end{defi}
 
 \begin{theo}
-  Une rumeur de note $q$ et non initialement propagée à tout le graphe ne se propagera pas à l'ensemble du réseau si et seulement si il existe un $p$-cluster avec $p>q$.
+  Une rumeur de note $q$ ne se propagera pas à l'ensemble du réseau si et seulement si il existe un $p$-cluster non initialement informé avec $p>q$.
 \end{theo}
 \begin{proof}
-  On pose $n=|V|$.
-  S'il existe un $p$-cluster C avec $p>q$, alors tout nœud de C possède au moins une proportion $p$ de voisins non informés. Ceci valant pour tous les nœuds de C, aucun nœud de C ne sera informé au bout de $n$ étapes. \emph{Les clusters sont donc des obstacles aux rumeurs.}
+  S'il existe un $p$-cluster C avec $p>q$, alors tout nœud de C possède au moins une proportion $p$ de voisins non informés. Ceci valant pour tous les nœuds de C, aucun nœud de C ne sera informé au bout de $n$ étapes. \emph{Les clusters sont des obstacles aux rumeurs.}
 
   S'il existe un nœud $i\in V$ tel qu'au bout de $n$ étapes $i$ ne soit pas dans l'état informé, alors la proportion $p$ de voisins de $i$ dans l'état informé vérifie $p \leq q$ ou encore $(1-p) > q \leq 0$. Il existe donc des voisins de $i$ vérifiant cette propriété, \emph{on a un $z$-cluster avec $z>q$}.
 \end{proof}
 
 \subsubsection{Génération des graphes}
 
-Les graphes sont générés avec l'algorithme de Watts-Strogatz qui permet de générer des graphes connexe vérifiant le phénomène du "petit monde".
+Les graphes sont générés avec l'algorithme de Watts-Strogatz qui permet de générer des graphes connexes vérifiant le phénomène du "petit monde" mis en évidence par Milgram.
 
-\begin{algorithm}
+\begin{algorithm}[H]
 \Donnees{$N \in \N, K \in \llbracket 1, \lfloor\frac{N}{2}\rfloor\rrbracket (N \gg K \gg \ln N), \beta \in [0,1]$
 }
 \Res{Matrice d'adjacence d'un graphe aléatoire.}
@@ -89,17 +104,55 @@ $M \leftarrow $ matrice avec pour $i\in \llbracket0,N-1\rrbracket$, $j\in \llbra
 \caption{Algorithme de Watts-Strogatz}
 \end{algorithm}
 
-Pour les expériences qui suivent on fixera $N=500$ et $K=50$. On fera varier $\beta$ dans $\{0,0.25,0.5,0.75,1\}$. L'algorithme a été implémenté en OCaml.
+Pour les expériences on fixera $N=500$ et $K=50$. On fera varier $\beta$ dans $\{0,0.25,0.5,0.75,1\}$. L'algorithme a été implémenté en OCaml.
 
 \subsubsection{Expériences}
-Il est difficile de définir ce qui est attendu d'une propagation optimale d'une rumeur. On comparera donc trois méthodes de choix des éléments initialement propagateurs.
+Il est difficile de définir ce qui est attendu d'une propagation optimale d'une rumeur. On comparera donc trois méthodes de choix des propagateurs initiaux.
 \begin{itemize}
-  \item La première est le choix par tirage au sort, à des fins de comparaison;
-  \item La seconde consiste à choisir les éléments possédant le plus grand degré. En effet une première analyse qualitative laisse penser que ces nœuds seront plus à même de "convaincre" une grande partie du réseau;
-  \item La dernière 
+  \item Le tirage au sort, à des fins de comparaison;
+  \item Les éléments de plus grand degré. En effet une première analyse qualitative laisse penser que ces nœuds seront plus à même de "convaincre" une grande partie du réseau;
+  \item Les éléments les plus centraux, c'est à dire ceux par lesquels passent la plus grande proportion de plus courts chemins. Pour cela on utilise l'algorithme de Ulrik Brandes. Cela caractérise la capacité d'un nœud à atteindre rapidement les autres nœuds du graphe.
+\end{itemize}
+
+Pour mesurer la capacité de propagation moyenne d'une méthode de choix, on réalise $100$ fois chaque expériences. Étant donné la longueur des calculs, un système de sauvegarde de l'avancement d'une expérience dans une base de données a été implémenté. Ceci permet d'interrompre une expérience et de la reprendre au même endroit lorsque le programme est relancé.
 
 \subsection{Résultats}
+On représente les résultats sous la forme d'une courbe $\text{proportion finale}=f(\text{proportion initiale})$. La courbe type obtenue est décrite à la figure \ref{random_finale_f_initiale_q50_Beta50_ec}.
+
+\resultat{random_finale_f_initiale_q50_Beta50_ec}{Courbe type (en pointillés rouge l'écart type)}
+
+Le paramètre $\beta$ a essentiellement une influence dans le choix par centralité. Les résultats sont résumés dans les figures \ref{resultats1}, \ref{resultats2} et \ref{resultats3}.
+\begin{figure}
+\centering
+\input{../../generationDeGraph/resultats/all_finale_f_initiale_q25}
+\caption{Résultats}
+\label{resultats1}
+\end{figure}
+\begin{figure}
+\centering
+\input{../../generationDeGraph/resultats/all_finale_f_initiale_q50}
+\caption{Résultats}
+\label{resultats2}
+\end{figure}
+\begin{figure}
+\centering
+\input{../../generationDeGraph/resultats/all_finale_f_initiale_q75}
+\caption{Résultats}
+\label{resultats3}
+\end{figure}
+
+\FloatBarrier
 \subsection{Analyse, exploitation et discussion}
+Les résultats montrent que pour des rumeurs relativement convaincantes, c'est-à-dire $q$ faible (ici $<25\%$), le choix par centralité est plus intéressant. En effet pour $\beta = \frac{1}{4}$, une proportion initiale de $50 \%$ des plus centraux permet d'atteindre tout le graphe là où il faut $10 \%$ des éléments de plus hauts degrés.
+
+En revanche, pour des rumeurs avec $q$ élevé ($>50\%$), la méthode des plus hauts degrés est à privilégier. 
+
+Les résultats devraient être confirmés par une étude sur un échantillon plus important de graphes. De plus, les graphes produits par l'algorithme sont irréalistes de par le degré des nœuds et le paramètre $\beta$ dont il est difficile de mesurer l'influence.
+
+Une étude plus précise prenant en compte le caractère cinétique de la propagation (nombre d'étapes pour atteindre tous les nœuds) serait nécessaire pour la tranche $\frac{1}{4} < q < \frac{1}{2}$.
+
 \section{Conclusion}
+Cette étude met en évidence une stratégie de choix des éléments propagateurs initiaux, bien que les résultats obtenus demandent une étude complémentaire qui n'a pas été réalisée du fait de la longueur des calculs (l'étude actuelle a déjà nécessité plusieurs centaines d'heures de simulation). Lorsque la rumeur est convaincante, il est préférable de choisir ces éléments pour leur centralité élevée. Sinon, lorsque la rumeur est moins convaincante, il est plus efficace de choisir les éléments de plus haut degré.
+
 
 \end{document}
