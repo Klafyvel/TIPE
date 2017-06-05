@@ -8,8 +8,7 @@
 \contentsline {section}{\numberline {7}experimentSpreadingDegree.ml}{9}
 \contentsline {section}{\numberline {8}experimentSpreadingBetween.ml}{10}
 \contentsline {section}{\numberline {9}experimentSpreadingAll.ml}{11}
-\contentsline {section}{\numberline {10}drawExperimentSpreadingRandom.py}{11}
-\contentsline {section}{\numberline {11}drawExperimentSpreadingRandomInitial.py}{13}
-\contentsline {section}{\numberline {12}drawExperimentSpreadingDegreeInitial.py}{14}
-\contentsline {section}{\numberline {13}drawExperimentSpreadingBetweenInitial.py}{16}
-\contentsline {section}{\numberline {14}drawExperimentSpreadingAllInitial.py}{17}
+\contentsline {section}{\numberline {10}drawExperimentSpreadingRandomInitial.py}{11}
+\contentsline {section}{\numberline {11}drawExperimentSpreadingDegreeInitial.py}{13}
+\contentsline {section}{\numberline {12}drawExperimentSpreadingBetweenInitial.py}{14}
+\contentsline {section}{\numberline {13}drawExperimentSpreadingAllInitial.py}{16}
