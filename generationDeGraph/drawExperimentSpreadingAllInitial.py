@@ -9,47 +9,47 @@ nb_gen = 100
 k = 50
 max_spread_step = 500
 conn = sqlite3.connect('experiments.sqlite')
-beta = 75
 
 size = 100
 l = [(1,1), (1,3), (3,1)]
 
 # size = 50
 # l = [(2,1)]
+X = np.arange(1,size)
+n = 4
+Y = [np.zeros(size) for _ in range(n)]
+Y_high = [np.zeros(size) for _ in range(n)]
+Y_low = [np.zeros(size) for _ in range(n)]
+corres = [
+    (50, "degree", "Degré", "red"),
+    (50, "random", "Aléatoire", "green"),
+    (25, "between", "Centralité $\\beta=\\frac{1}{4}$", "m"),
+    (75, "between", "Centralité $\\beta=\\frac{3}{4}$", "b"),
+]
 
-for a,b in l:
-    X = np.arange(1,size)
+def affiche(a, b):
     pl.close('all')
     fig = pl.figure()
     ax = fig.add_subplot(111)
-    ax.set_title('Taille du graphe={} Nb gen={} K={}, q={}, Beta ={}\\%'
-        .format(graph_size,nb_gen,k,round(b/(a+b), 3),beta))
+    ax.set_title('Taille du graphe:{} Échantillon:{} K={}, q=$\\frac'
+        .format(graph_size,nb_gen,k)+'{'+str(b)+'}{'+str(a+b)+'}$')
     ax.set_ylabel("Proportion finale")
-    ax.set_xlabel("Proportion initiale (\\%)")
-    
-    
-    Y = [np.zeros(size) for _ in range(3)]
-    Y_high = [np.zeros(size) for _ in range(3)]
-    Y_low = [np.zeros(size) for _ in range(3)]
-    
-    corres = ["between", "degree", "random"]
-    x_50 = [0,0,0]
+    ax.set_xlabel("Proportion initiale")
+
     pl.grid()
-    pl.plot(X,X/100, '--', color="gray", label="Identité", lw=2.5)
-    for i in range(3):
+    pl.plot(X/100,X/100, '--', color="gray", label="Identité", lw=2.5)
+    for i,(beta, name, label, color) in enumerate(corres):
         for x in X:
             cursor = conn.execute(
-                "SELECT value FROM r_spreading_{}_".format(corres[i])+
-                "{graph_size}_{beta}_{k}_{nb_gen}_{x}_{max_spread_step}_{a}_{b}"
-                .format(**locals()))
+                "SELECT value FROM r_spreading_{}_".format(name)+
+                "{}_{}_{}_{}_{}_{}_{}_{}"
+                .format(graph_size, beta, k, nb_gen, x, max_spread_step, a, b))
             rows = cursor.fetchall()
             v = 0
             n = len(rows)
             for row in rows:
                 v += json.loads(row[0])['prop_spread'][-1]
             Y[i][x] = v/n
-            if abs(0.5-Y[i][x]) < abs(Y[i][x_50[i]]-0.5):
-                x_50[i] = x
             v = 0
             for row in rows:
                 v += (Y[i][x] - json.loads(row[0])['prop_spread'][-1])**2 
@@ -57,14 +57,18 @@ for a,b in l:
             Y_high[i][x] = Y[i][x] + v
             Y_low[i][x] = Y[i][x] - v
 
-        pl.plot(X,Y[i][1:], label="Propagation finale {}".format(corres[i]), lw=2.5)
+        pl.plot(X/100,Y[i][1:], label="{}".format(label), lw=2.5, color=color)
 
-    for i in range(3):
-        pl.plot(X, Y_high[i][1:], 'r--', lw=2)
-        pl.plot(X, Y_low[i][1:], 'r--', lw=2)
-    pl.axhline(0.5, xmin=0, xmax=100, c='orange', lw=2.5)
+    # for i in range(3):
+        # pl.plot(X, Y_high[i][1:], 'r--', lw=2)
+        # pl.plot(X, Y_low[i][1:], 'r--', lw=2)
+    # pl.axhline(0.5, xmin=0, xmax=100, c='orange', lw=2.5)
     pl.legend(loc="lower right")
-    # tikz_save("resultats/all_finale_f_initiale_q{}_Beta{}_ec.tex"
-    #     .format(int(b/(a+b)*100), beta))
-    pl.show()
+    tikz_save("resultats/all_finale_f_initiale_q{}.tex"
+        .format(int(b/(a+b)*100), beta),
+        figurewidth="\\textwidth",
+        figureheight=".33\\textheight")
+    # pl.show()
+for a,b in l:
+    affiche(a,b)
 conn.close()

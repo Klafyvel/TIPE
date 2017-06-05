@@ -16,7 +16,7 @@ for a,b in [(1,1), (1,3), (3,1)]:
         pl.close('all')
         fig = pl.figure()
         ax = fig.add_subplot(111)
-        ax.set_title('Taille du graphe={} Nb gen={} K={}, q={}, Beta ={}\\%'
+        ax.set_title('Taille du graphe={} Taille de l\'échantillon={} K={}, q={}, Beta ={}\\%'
             .format(graph_size,nb_gen,k,b/(a+b),beta))
         ax.set_ylabel("Proportion finale")
         ax.set_xlabel("Proportion initiale (\\%)")
@@ -58,7 +58,7 @@ for a,b in [(1,1), (1,3), (3,1)]:
         pl.axvline(x_50, c='orange', lw=2.5)
         pl.axhline(0.5, xmin=0, xmax=100, c='orange', lw=2.5)
         
-        pl.text(x_50+1, 0.1, str(x_50)+" \\%",
+        pl.text(x_50-10, 0.1, str(x_50)+" \\%",
             bbox=dict(facecolor='orange', alpha=0.95), 
             size="large",
             color="white",
