@@ -3,15 +3,18 @@
 \BOOKMARK [3][]{Outline0.2.1.5}{Réseau social}{Outline0.2}% 3
 \BOOKMARK [3][]{Outline0.2.2.9}{Caractéristiques des réseaux simulés}{Outline0.2}% 4
 \BOOKMARK [3][]{Outline0.2.3.12}{Simulation\040de\040propagation}{Outline0.2}% 5
-\BOOKMARK [3][]{Outline0.2.4.24}{Propagation\040optimale}{Outline0.2}% 6
+\BOOKMARK [3][]{Outline0.2.4.22}{Propagation\040optimale}{Outline0.2}% 6
 \BOOKMARK [2][]{Outline0.3}{Génération de graphes}{}% 7
 \BOOKMARK [2][]{Outline0.4}{Expériences}{}% 8
-\BOOKMARK [3][]{Outline0.4.1.41}{Expérience 1}{Outline0.4}% 9
-\BOOKMARK [3][]{Outline0.4.2.43}{Courbes\040de\040propagation}{Outline0.4}% 10
-\BOOKMARK [3][]{Outline0.4.3.43}{Proportion\040atteinte\040en\040fonction\040de\040la\040proportion\040initiale}{Outline0.4}% 11
-\BOOKMARK [3][]{Outline0.4.4.52}{Expérience 2}{Outline0.4}% 12
-\BOOKMARK [3][]{Outline0.4.5.55}{Expérience 3}{Outline0.4}% 13
+\BOOKMARK [3][]{Outline0.4.1.39}{Expérience 1}{Outline0.4}% 9
+\BOOKMARK [3][]{Outline0.4.2.45}{Courbes\040de\040propagation}{Outline0.4}% 10
+\BOOKMARK [3][]{Outline0.4.3.45}{Proportion\040atteinte\040en\040fonction\040de\040la\040proportion\040initiale}{Outline0.4}% 11
+\BOOKMARK [3][]{Outline0.4.4.54}{Expérience 2}{Outline0.4}% 12
+\BOOKMARK [3][]{Outline0.4.5.57}{Expérience 3}{Outline0.4}% 13
 \BOOKMARK [2][]{Outline0.5}{Résultats}{}% 14
-\BOOKMARK [3][]{Outline0.5.1.59}{Comparaison}{Outline0.5}% 15
-\BOOKMARK [3][]{Outline0.5.2.72}{Conséquences}{Outline0.5}% 16
+\BOOKMARK [3][]{Outline0.5.1.61}{Comparaison}{Outline0.5}% 15
+\BOOKMARK [3][]{Outline0.5.2.64}{Conséquences}{Outline0.5}% 16
 \BOOKMARK [2][]{Outline0.6}{Conclusion}{}% 17
+\BOOKMARK [1][]{Outline1}{Annexe}{}% 18
+\BOOKMARK [2][]{Outline1.7}{Démonstration : Les clusters sont les seuls obstacles aux rumeurs}{Outline1}% 19
+\BOOKMARK [2][]{Outline1.8}{Algorithme\040de\040Watts-Strogatz}{Outline1}% 20

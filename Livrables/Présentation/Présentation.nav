@@ -25,74 +25,91 @@
 \headcommand {\beamer@framepages {17}{19}}
 \headcommand {\slideentry {2}{3}{3}{20/20}{Simulation de propagation}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {2}{3}{4}{21/23}{Simulation de propagation}{0}}
-\headcommand {\beamer@framepages {21}{23}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{24}{Propagation optimale}}\headcommand {\beamer@subsectionpages {12}{23}}
-\headcommand {\slideentry {2}{4}{1}{24/27}{Propagation optimale}{0}}
-\headcommand {\beamer@framepages {24}{27}}
-\headcommand {\sectionentry {3}{Génération de graphes}{28}{Génération de graphes}{0}}
-\headcommand {\beamer@sectionpages {4}{27}}
-\headcommand {\beamer@subsectionpages {24}{27}}
-\headcommand {\slideentry {3}{0}{1}{28/28}{}{0}}
-\headcommand {\beamer@framepages {28}{28}}
-\headcommand {\slideentry {3}{0}{2}{29/29}{}{0}}
-\headcommand {\beamer@framepages {29}{29}}
-\headcommand {\slideentry {3}{0}{3}{30/34}{}{0}}
-\headcommand {\beamer@framepages {30}{34}}
-\headcommand {\slideentry {3}{0}{4}{35/39}{}{0}}
-\headcommand {\beamer@framepages {35}{39}}
-\headcommand {\sectionentry {4}{Expériences}{40}{Expériences}{0}}
-\headcommand {\beamer@sectionpages {28}{39}}
-\headcommand {\beamer@subsectionpages {28}{39}}
-\headcommand {\slideentry {4}{0}{1}{40/40}{}{0}}
-\headcommand {\beamer@framepages {40}{40}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{41}{Expérience 1}}\headcommand {\beamer@subsectionpages {40}{40}}
-\headcommand {\slideentry {4}{1}{1}{41/42}{Expérience 1}{0}}
-\headcommand {\beamer@framepages {41}{42}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{43}{Courbes de propagation}}\headcommand {\beamer@subsectionpages {41}{42}}
-\headcommand {\beamer@subsectionentry {0}{4}{3}{43}{Proportion atteinte en fonction de la proportion initiale}}\headcommand {\beamer@subsectionpages {43}{42}}
-\headcommand {\slideentry {4}{3}{1}{43/43}{Proportion atteinte en fonction de la proportion initiale}{0}}
-\headcommand {\beamer@framepages {43}{43}}
-\headcommand {\slideentry {4}{3}{2}{44/48}{Proportion atteinte en fonction de la proportion initiale}{0}}
-\headcommand {\beamer@framepages {44}{48}}
-\headcommand {\slideentry {4}{3}{3}{49/51}{Proportion atteinte en fonction de la proportion initiale}{0}}
-\headcommand {\beamer@framepages {49}{51}}
-\headcommand {\beamer@subsectionentry {0}{4}{4}{52}{Expérience 2}}\headcommand {\beamer@subsectionpages {43}{51}}
-\headcommand {\slideentry {4}{4}{1}{52/52}{Expérience 2}{0}}
-\headcommand {\beamer@framepages {52}{52}}
-\headcommand {\slideentry {4}{4}{2}{53/54}{Expérience 2}{0}}
-\headcommand {\beamer@framepages {53}{54}}
-\headcommand {\beamer@subsectionentry {0}{4}{5}{55}{Expérience 3}}\headcommand {\beamer@subsectionpages {52}{54}}
-\headcommand {\slideentry {4}{5}{1}{55/55}{Expérience 3}{0}}
-\headcommand {\beamer@framepages {55}{55}}
-\headcommand {\slideentry {4}{5}{2}{56/57}{Expérience 3}{0}}
-\headcommand {\beamer@framepages {56}{57}}
-\headcommand {\sectionentry {5}{Résultats}{58}{Résultats}{0}}
-\headcommand {\beamer@sectionpages {40}{57}}
-\headcommand {\beamer@subsectionpages {55}{57}}
-\headcommand {\slideentry {5}{0}{1}{58/58}{}{0}}
-\headcommand {\beamer@framepages {58}{58}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{59}{Comparaison}}\headcommand {\beamer@subsectionpages {58}{58}}
-\headcommand {\slideentry {5}{1}{1}{59/62}{Comparaison}{0}}
-\headcommand {\beamer@framepages {59}{62}}
-\headcommand {\slideentry {5}{1}{2}{63/66}{Comparaison}{0}}
-\headcommand {\beamer@framepages {63}{66}}
-\headcommand {\slideentry {5}{1}{3}{67/70}{Comparaison}{0}}
-\headcommand {\beamer@framepages {67}{70}}
-\headcommand {\slideentry {5}{1}{4}{71/71}{Comparaison}{0}}
-\headcommand {\beamer@framepages {71}{71}}
-\headcommand {\beamer@subsectionentry {0}{5}{2}{72}{Conséquences}}\headcommand {\beamer@subsectionpages {59}{71}}
-\headcommand {\slideentry {5}{2}{1}{72/75}{Conséquences}{0}}
-\headcommand {\beamer@framepages {72}{75}}
-\headcommand {\sectionentry {6}{Conclusion}{76}{Conclusion}{0}}
-\headcommand {\beamer@sectionpages {58}{75}}
-\headcommand {\beamer@subsectionpages {72}{75}}
-\headcommand {\slideentry {6}{0}{1}{76/76}{}{0}}
-\headcommand {\beamer@framepages {76}{76}}
-\headcommand {\slideentry {6}{0}{2}{77/82}{}{0}}
-\headcommand {\beamer@framepages {77}{82}}
-\headcommand {\beamer@partpages {1}{82}}
-\headcommand {\beamer@subsectionpages {76}{82}}
-\headcommand {\beamer@sectionpages {76}{82}}
-\headcommand {\beamer@documentpages {82}}
-\headcommand {\def \inserttotalframenumber {32}}
+\headcommand {\slideentry {2}{3}{4}{21/21}{Simulation de propagation}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{22}{Propagation optimale}}\headcommand {\beamer@subsectionpages {12}{21}}
+\headcommand {\slideentry {2}{4}{1}{22/25}{Propagation optimale}{0}}
+\headcommand {\beamer@framepages {22}{25}}
+\headcommand {\sectionentry {3}{Génération de graphes}{26}{Génération de graphes}{0}}
+\headcommand {\beamer@sectionpages {4}{25}}
+\headcommand {\beamer@subsectionpages {22}{25}}
+\headcommand {\slideentry {3}{0}{1}{26/26}{}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {3}{0}{2}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\slideentry {3}{0}{3}{28/32}{}{0}}
+\headcommand {\beamer@framepages {28}{32}}
+\headcommand {\slideentry {3}{0}{4}{33/37}{}{0}}
+\headcommand {\beamer@framepages {33}{37}}
+\headcommand {\sectionentry {4}{Expériences}{38}{Expériences}{0}}
+\headcommand {\beamer@sectionpages {26}{37}}
+\headcommand {\beamer@subsectionpages {26}{37}}
+\headcommand {\slideentry {4}{0}{1}{38/38}{}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{39}{Expérience 1}}\headcommand {\beamer@subsectionpages {38}{38}}
+\headcommand {\slideentry {4}{1}{1}{39/44}{Expérience 1}{0}}
+\headcommand {\beamer@framepages {39}{44}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{45}{Courbes de propagation}}\headcommand {\beamer@subsectionpages {39}{44}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{45}{Proportion atteinte en fonction de la proportion initiale}}\headcommand {\beamer@subsectionpages {45}{44}}
+\headcommand {\slideentry {4}{3}{1}{45/45}{Proportion atteinte en fonction de la proportion initiale}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\slideentry {4}{3}{2}{46/50}{Proportion atteinte en fonction de la proportion initiale}{0}}
+\headcommand {\beamer@framepages {46}{50}}
+\headcommand {\slideentry {4}{3}{3}{51/53}{Proportion atteinte en fonction de la proportion initiale}{0}}
+\headcommand {\beamer@framepages {51}{53}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{54}{Expérience 2}}\headcommand {\beamer@subsectionpages {45}{53}}
+\headcommand {\slideentry {4}{4}{1}{54/54}{Expérience 2}{0}}
+\headcommand {\beamer@framepages {54}{54}}
+\headcommand {\slideentry {4}{4}{2}{55/56}{Expérience 2}{0}}
+\headcommand {\beamer@framepages {55}{56}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{57}{Expérience 3}}\headcommand {\beamer@subsectionpages {54}{56}}
+\headcommand {\slideentry {4}{5}{1}{57/57}{Expérience 3}{0}}
+\headcommand {\beamer@framepages {57}{57}}
+\headcommand {\slideentry {4}{5}{2}{58/59}{Expérience 3}{0}}
+\headcommand {\beamer@framepages {58}{59}}
+\headcommand {\sectionentry {5}{Résultats}{60}{Résultats}{0}}
+\headcommand {\beamer@sectionpages {38}{59}}
+\headcommand {\beamer@subsectionpages {57}{59}}
+\headcommand {\slideentry {5}{0}{1}{60/60}{}{0}}
+\headcommand {\beamer@framepages {60}{60}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{61}{Comparaison}}\headcommand {\beamer@subsectionpages {60}{60}}
+\headcommand {\slideentry {5}{1}{1}{61/61}{Comparaison}{0}}
+\headcommand {\beamer@framepages {61}{61}}
+\headcommand {\slideentry {5}{1}{2}{62/62}{Comparaison}{0}}
+\headcommand {\beamer@framepages {62}{62}}
+\headcommand {\slideentry {5}{1}{3}{63/63}{Comparaison}{0}}
+\headcommand {\beamer@framepages {63}{63}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{64}{Conséquences}}\headcommand {\beamer@subsectionpages {61}{63}}
+\headcommand {\slideentry {5}{2}{1}{64/67}{Conséquences}{0}}
+\headcommand {\beamer@framepages {64}{67}}
+\headcommand {\sectionentry {6}{Conclusion}{68}{Conclusion}{0}}
+\headcommand {\beamer@sectionpages {60}{67}}
+\headcommand {\beamer@subsectionpages {64}{67}}
+\headcommand {\slideentry {6}{0}{1}{68/68}{}{0}}
+\headcommand {\beamer@framepages {68}{68}}
+\headcommand {\slideentry {6}{0}{2}{69/74}{}{0}}
+\headcommand {\beamer@framepages {69}{74}}
+\headcommand {\partentry {Annexe}{1}}
+\headcommand {\beamer@partpages {1}{74}}
+\headcommand {\beamer@sectionpages {68}{74}}
+\headcommand {\beamer@subsectionpages {68}{74}}
+\headcommand {\beamer@appendixpages {75}}
+\headcommand {\sectionentry {7}{Démonstration : Les clusters sont les seuls obstacles aux rumeurs}{75}{Démonstration : Les clusters sont les seuls obstacles aux rumeurs}{1}}
+\headcommand {\beamer@sectionpages {75}{74}}
+\headcommand {\beamer@subsectionpages {75}{74}}
+\headcommand {\slideentry {7}{0}{1}{75/75}{}{1}}
+\headcommand {\beamer@framepages {75}{75}}
+\headcommand {\slideentry {7}{0}{2}{76/77}{}{1}}
+\headcommand {\beamer@framepages {76}{77}}
+\headcommand {\sectionentry {8}{Algorithme de Watts-Strogatz}{78}{Algorithme de Watts-Strogatz}{1}}
+\headcommand {\beamer@sectionpages {75}{77}}
+\headcommand {\beamer@subsectionpages {75}{77}}
+\headcommand {\slideentry {8}{0}{1}{78/78}{}{1}}
+\headcommand {\beamer@framepages {78}{78}}
+\headcommand {\slideentry {8}{0}{2}{79/79}{}{1}}
+\headcommand {\beamer@framepages {79}{79}}
+\headcommand {\beamer@partpages {75}{79}}
+\headcommand {\beamer@subsectionpages {78}{79}}
+\headcommand {\beamer@sectionpages {78}{79}}
+\headcommand {\beamer@documentpages {79}}
+\headcommand {\def \inserttotalframenumber {35}}

@@ -128,13 +128,6 @@
   \begin{block}{Théorème}
     Les clusters sont les seuls obstacles aux rumeurs.
   \end{block}
-  On pose $n=|V|$, $q$ la note de la rumeur.
-  \only<2-2>{
-    S'il existe un $p$-cluster C avec $p>q$, alors tout nœud de C possède au moins une proportion $p$ de voisins non informés. Ceci valant pour tous les nœuds de C, aucun nœud de C ne sera informé au bout de $n$ étapes.
-  }
-  \only<3->{
-    S'il existe un nœud $i$ tel qu'au bout de $n$ étapes $i$ ne soit pas dans l'état informé, alors la proportion $p$ de voisins de $i$ dans l'état informé vérifie $p \leq q$ ou encore $(1-p) > q \leq 0$. Il existe donc des voisins de $i$ vérifiant cette propriété, on a un $z$-cluster avec $z>q$.
-  }
 \end{frame}
 
 \subsection{Propagation optimale}
@@ -157,27 +150,10 @@
 \section{Génération de graphes}
 \begin{frame}
   \frametitle{Algorithme de Watts-Strogatz}
-  \fontsize{10}{11}\selectfont
-  \begin{algorithm}[H]
-  \Donnees{$N \in \N, K \in \llbracket 1, \lfloor\frac{N}{2}\rfloor\rrbracket (N \gg K \gg \ln N), \beta \in [0,1]$
-  }
-  \Res{Matrice d'adjacence d'un graphe aléatoire.}
-  $M \leftarrow $ matrice avec pour $i\in \llbracket0,N-1\rrbracket$, $j\in \llbracket1,K\rrbracket$, $M_{i,i+j[N]} = M_{i,i-j[N]} = \text{Vrai}$, Faux pour les autres \;
-  \Pour{$i\in \llbracket0,N-1\rrbracket$}{
-    \Pour{$j\in \llbracket1,K\rrbracket$}{
-      $r \leftarrow$ Nombre aléatoire sur $[0,1]$\;
-      \Si{$r<\beta$}{
-        $M_{i,i+j[N]} \leftarrow $ Faux\;
-        $M_{i+j[N],i} \leftarrow $ Faux\;
-        Choisir au hasard $k$ tel que $M_{i,k}=\text{Faux}$\;
-        $M_{i,k} \leftarrow $ Vrai\;
-        $M_{k,i} \leftarrow $ Vrai\;
-      }
-    }
-  }
-  \Retour{$M$}
-  \end{algorithm}
-\end{frame} 
+  \begin{center}
+  $N \in \N, K \in \llbracket 1, \lfloor\frac{N}{2}\rfloor\rrbracket (N \gg K \gg \ln N), \beta \in [0,1]$
+  \end{center}
+\end{frame}
 \begin{frame}
   \frametitle{Algorithme de Watts-Strogatz}
   \only<1-1>{\illustration{WS_1}}
@@ -204,10 +180,17 @@
 \subsection{Expérience 1}
 \begin{frame}
   \frametitle{Protocole expérimental}
-  On fixe $K=50$.
-  Pour $\beta \in \{0,0.25,0.5,1\}$ et $q\in \{0.25, 0.5, 0.75\}$, pour une proportion initiale de 1\% à 99\% faire 100 expériences de propagation en choisissant les éléments initiaux au hasard et stocker la propagation à chaque étape de la simulation.
+  \begin{itemize}
+    \item<1->On fixe $K=50$;
+    \item<2->$\beta \in \{0,\frac{1}{4},\frac{1}{2},1\}$;
+    \item<3->$q\in \{\frac{1}{4}, \frac{1}{2}, \frac{3}{4}\}$;
+    \item<4->proportion initiale de 1\% à 99\%;
+  \end{itemize}
+  \uncover<5->{
+  $\rightarrow$ 100 expériences de propagation en choisissant les éléments initiaux au hasard et stocker la propagation à chaque étape de la simulation.
 
-  \uncover<2->{
+  }
+  \uncover<6->{
     But : pouvoir comparer les résultats des autres expériences, éventuellement fixer certains paramètres qui ont peu d'influence.
   }
 \end{frame}
@@ -239,8 +222,13 @@
 \subsection{Expérience 2}
 \begin{frame}
   \frametitle{Protocole expérimental}
-  On fixe $K=50$.
-  Pour $\beta \in \{0,0.25,0.5,1\}$ et $q\in \{0.25, 0.5, 0.75\}$, pour une proportion initiale de 1\% à 99\% faire 100 expériences de propagation en choisissant les éléments initiaux possédant les plus grands degrés et stocker la propagation à chaque étape de la simulation.
+  \begin{itemize}
+    \item On fixe $K=50$;
+    \item $\beta \in \{0,\frac{1}{4},\frac{1}{2},1\}$;
+    \item $q\in \{\frac{1}{4}, \frac{1}{2}, \frac{3}{4}\}$;
+    \item proportion initiale de 1\% à 99\%;
+  \end{itemize}
+  $\rightarrow$ 100 expériences de propagation en choisissant les éléments initiaux possédant les plus grands degrés et stocker la propagation à chaque étape de la simulation.
 \end{frame}
 \begin{frame}
   \frametitle{Remarques sur les résultats}
@@ -253,8 +241,13 @@
 \subsection{Expérience 3}
 \begin{frame}
   \frametitle{Protocole expérimental}
-  On fixe $K=50$.
-  Pour $\beta \in \{0,0.25,0.5,1\}$ et $q\in \{0.25, 0.5, 0.75\}$, pour une proportion initiale de 1\% à 99\% faire 100 expériences de propagation en choisissant les éléments initiaux possédant les plus grandes centralités (proportion de plus courts chemins passants par un nœud) et stocker la propagation à chaque étape de la simulation.
+  \begin{itemize}
+    \item On fixe $K=50$;
+    \item $\beta \in \{0,\frac{1}{4},\frac{1}{2},1\}$;
+    \item $q\in \{\frac{1}{4}, \frac{1}{2}, \frac{3}{4}\}$;
+    \item proportion initiale de 1\% à 99\%;
+  \end{itemize}
+  $\rightarrow$ 100 expériences de propagation en choisissant les éléments initiaux possédant possédant les plus grandes centralités (proportion de plus courts chemins passants par un nœud, algorithme de Ulrik Brandes) et stocker la propagation à chaque étape de la simulation.
 \end{frame}
 \begin{frame}
   \frametitle{Remarques sur les résultats}
@@ -267,33 +260,24 @@
 \section{Résultats}
 \subsection{Comparaison}
 \begin{frame}
-  \frametitle{$q = \frac{3}{4}$}
-  \only<1-1>{\resultat{all_finale_f_initiale_q75_Beta25_ec}}
-  \only<2-2>{\resultat{all_finale_f_initiale_q75_Beta50_ec}}
-  \only<3-3>{\resultat{all_finale_f_initiale_q75_Beta75_ec}}
-  \only<4-4>{\resultat{all_finale_f_initiale_q75_Beta100_ec}}
+  \frametitle{$q = \frac{1}{4}$}
+  \resultat{all_finale_f_initiale_q25_pres}
 \end{frame}
 
 \begin{frame}
   \frametitle{$q = \frac{1}{2}$}
-  \only<1-1>{\resultat{all_finale_f_initiale_q50_Beta25_ec}}
-  \only<2-2>{\resultat{all_finale_f_initiale_q50_Beta50_ec}}
-  \only<3-3>{\resultat{all_finale_f_initiale_q50_Beta75_ec}}
-  \only<4-4>{\resultat{all_finale_f_initiale_q50_Beta100_ec}}
+  \resultat{all_finale_f_initiale_q50_pres}
 \end{frame}
 
 \begin{frame}
-  \frametitle{$q = \frac{1}{4}$}
-  \only<1-1>{\resultat{all_finale_f_initiale_q25_Beta25_ec}}
-  \only<2-2>{\resultat{all_finale_f_initiale_q25_Beta50_ec}}
-  \only<3-3>{\resultat{all_finale_f_initiale_q25_Beta75_ec}}
-  \only<4-4>{\resultat{all_finale_f_initiale_q25_Beta100_ec}}
+  \frametitle{$q = \frac{3}{4}$}
+  \resultat{all_finale_f_initiale_q75_pres}
 \end{frame}
 
-\begin{frame}
-  \frametitle{$q = \frac{1}{3}$}
-  \resultat{all_finale_f_initiale_q33_Beta50_ec}
-\end{frame}
+% \begin{frame}
+%   \frametitle{$q = \frac{1}{3}$}
+%   \resultat{all_finale_f_initiale_q33_Beta50_ec}
+% \end{frame}
 
 \subsection{Conséquences}
 \begin{frame}
@@ -304,11 +288,11 @@
     On peut choisir les éléments initialement propagateurs en connaissant $q$.
   \end{center}
   \end{alertblock}
-  Pour $\beta=50\%$,
+  Pour $\beta=\frac{1}{4}$,
   \begin{itemize}
-    \item<2-> Si $q \geq \frac{1}{2}$ On choisit une proportion $\approx q$ des éléments de plus haut degré;
-    \item<3-> Si $q \leq \frac{1}{3}$ On choisit une proportion $\approx \frac{q}{2}$ des éléments de plus haut degré;
-    \item<4-> Une étude plus quantitative serait nécessaire pour $\frac{1}{3} < q < \frac{1}{2}$.
+    \item<2-> Si $q \geq \frac{1}{2} \rightarrow \approx q$ des éléments de plus haut degré;
+    \item<3-> Si $q \leq \frac{1}{4} \rightarrow \approx 5\%$ des éléments de plus haut degré;
+    \item<4-> Une étude plus quantitative serait nécessaire pour $\frac{1}{4} < q < \frac{1}{2}$.
   \end{itemize}
 \end{frame}
 \section{Conclusion}
@@ -326,4 +310,41 @@
   \end{itemize}
 \end{frame}
 
+\appendix
+
+\section{Démonstration : Les clusters sont les seuls obstacles aux rumeurs}
+\begin{frame}
+  \frametitle{Démonstration : Les clusters sont les seuls obstacles aux rumeurs}
+  On pose $n=|V|$, $q$ la note de la rumeur.
+  \only<1-1>{
+    S'il existe un $p$-cluster C avec $p>q$, alors tout nœud de C possède au moins une proportion $p$ de voisins non informés. Ceci valant pour tous les nœuds de C, aucun nœud de C ne sera informé au bout de $n$ étapes.
+  }
+  \only<2->{
+    S'il existe un nœud $i$ tel qu'au bout de $n$ étapes $i$ ne soit pas dans l'état informé, alors la proportion $p$ de voisins de $i$ dans l'état informé vérifie $p \leq q$ ou encore $(1-p) > q \leq 0$. Il existe donc des voisins de $i$ vérifiant cette propriété, on a un $z$-cluster avec $z>q$.
+  }
+\end{frame}
+\section{Algorithme de Watts-Strogatz}
+\begin{frame}
+  \frametitle{Algorithme de Watts-Strogatz}
+  \fontsize{10}{11}\selectfont
+  \begin{algorithm}[H]
+  \Donnees{$N \in \N, K \in \llbracket 1, \lfloor\frac{N}{2}\rfloor\rrbracket (N \gg K \gg \ln N), \beta \in [0,1]$
+  }
+  \Res{Matrice d'adjacence d'un graphe aléatoire.}
+  $M \leftarrow $ matrice avec pour $i\in \llbracket0,N-1\rrbracket$, $j\in \llbracket1,K\rrbracket$, $M_{i,i+j[N]} = M_{i,i-j[N]} = \text{Vrai}$, Faux pour les autres \;
+  \Pour{$i\in \llbracket0,N-1\rrbracket$}{
+    \Pour{$j\in \llbracket1,K\rrbracket$}{
+      $r \leftarrow$ Nombre aléatoire sur $[0,1]$\;
+      \Si{$r<\beta$}{
+        $M_{i,i+j[N]} \leftarrow $ Faux\;
+        $M_{i+j[N],i} \leftarrow $ Faux\;
+        Choisir au hasard $k$ tel que $M_{i,k}=\text{Faux}$\;
+        $M_{i,k} \leftarrow $ Vrai\;
+        $M_{k,i} \leftarrow $ Vrai\;
+      }
+    }
+  }
+  \Retour{$M$}
+  \end{algorithm}
+\end{frame}
 \end{document}
