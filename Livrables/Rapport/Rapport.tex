@@ -34,7 +34,7 @@ Faisant suite à la recherche documentaire, une première approche théorique de
 \section{Propagation de rumeurs}
 \subsection{Modalités d'action}
 \subsubsection{Étude théorique}
-L'étude théorique a consisté en la formalisation des concepts de rumeur et de propagation. On modélise naturellement un réseau social par un graphe $G = (V,E)$, avec $V$ un ensemble de nœuds et $E\subset V²$, que l'on supposera connexe par la suite. Chaque membre du réseau est modélisé par un nœud du graphe et ses liens sociaux par des arrêtes.
+L'étude théorique a consisté en la formalisation des concepts de rumeur et de propagation. On modélise naturellement un réseau social par un graphe $G = (V,E)$, avec $V$ un ensemble de nœuds et $E\subset V²$, que l'on supposera connexe par la suite. Chaque membre du réseau est modélisé par un nœud du graphe et ses liens sociaux par des arêtes.
 
 On cherche d'abord à caractériser le comportement d'un nœud. Pour cela on considère qu'un nœud peut se trouver dans deux états distincts : il transmet la rumeur à tous ses voisins ($A$) ou il ne relaie pas la rumeur ($B$). Pour chaque nœud $i\in V$, si $i$ est dans l'état $A$, alors pour chacun de ses voisins également dans l'état $A$, $i$ réalise un gain $a$. De même si $i$ est dans l'état $B$, il réalise un gain $b$ pour chacun de ses voisins dans l'état $B$. On procède ensuite à une simulation où, à chaque étape, tous les nœuds du graphe tentent de maximiser leur gain en choisissant ou non de passer à l'état $A$ (on n'autorise pas les passages de $A$ vers $B$).
 
@@ -60,7 +60,7 @@ Dans la suite on pose $n=|V|$.
   La suite $(V_k)_{k\in\N}$ converge en $n$ étapes au plus.
 \end{prop}
 \begin{proof}
-  La suite $(V_k)_{k\in\N}$ étant croissante pour l'inclusion et majorée par $V$, elle converge. D'autre part, d'après la proposition \ref{stationnaire}, elle est stationnaire à partir du rang $k\in\N$ si $V_k = V_{k+1}$. Or il n'y a que $n$ nœuds, donc la suite est stationnaire à partir du rang $n-1$ au plus. 
+  La suite $(V_k)_{k\in\N}$ étant croissante pour l'inclusion et les cardinaux des $V_k$ majorés par $n$, elle est stationnaire. D'autre part, d'après la proposition \ref{stationnaire}, elle est stationnaire à partir du rang $k\in\N$ si $V_k = V_{k+1}$. Or il n'y a que $n$ nœuds, donc la suite est stationnaire à partir du rang $n-1$ au plus. 
 \end{proof}
 
 La proposition \ref{convergente} assure que toutes les simulations pourront être terminées en un temps fini. La proposition \ref{stationnaire} permet de raccourcir la durée d'une simulation en comptant le nombre d'éléments qui passent à l'état $A$ à chaque étape de simulation. S'il est nul, alors la simulation est terminée.
@@ -111,7 +111,7 @@ Il est difficile de définir ce qui est attendu d'une propagation optimale d'une
 \begin{itemize}
   \item Le tirage au sort, à des fins de comparaison;
   \item Les éléments de plus grand degré. En effet une première analyse qualitative laisse penser que ces nœuds seront plus à même de "convaincre" une grande partie du réseau;
-  \item Les éléments les plus centraux, c'est à dire ceux par lesquels passent la plus grande proportion de plus courts chemins. Pour cela on utilise l'algorithme de Ulrik Brandes. Cela caractérise la capacité d'un nœud à atteindre rapidement les autres nœuds du graphe.
+  \item Les éléments les plus centraux, c'est à dire ceux par lesquels passent la plus grande proportion de plus courts chemins. Pour cela on utilise l'algorithme de Ulrik Brandes. Cela caractérise la capacité d'un nœud à atteindre rapidement les autres nœuds du graphe. Formellement, $$\forall v\in V, C_B(v) = \sum_{s\neq v\neq t\in V} \frac{\sigma_{st}(v)}{\sigma_{st}}$$ avec $\sigma_{st}(v)$ le nombre de plus courts chemins de $s$ à $t$ passant par $v$ et $\sigma_{st}$ le nombre de plus courts chemins de $s$ à $t$.
 \end{itemize}
 
 Pour mesurer la capacité de propagation moyenne d'une méthode de choix, on réalise $100$ fois chaque expériences. Étant donné la longueur des calculs, un système de sauvegarde de l'avancement d'une expérience dans une base de données a été implémenté. Ceci permet d'interrompre une expérience et de la reprendre au même endroit lorsque le programme est relancé.
