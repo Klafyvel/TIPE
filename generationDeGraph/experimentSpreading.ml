@@ -12,7 +12,8 @@ let json_of_exp_stat e =
   `Assoc [
   ("graph_no", `Int e.graph_no);
   ("prop_spread", 
-    `List (List.map (Array.to_list e.prop_spread) ~f:(fun x -> `Float x)))
+    `List (List.map (Array.to_list e.prop_spread) 
+      ~f:(fun x -> `Float x)))
 ];;
 
 let exp_stat_of_json json =
@@ -36,7 +37,8 @@ let save_step db e exp_name=
   Experiment.change_last_id db exp_name e.graph_no
 ;;
 
-let process ?(max=99) db graph_size nb_gen k beta max_spread_step a b choose_spread name=
+let process ?(max=99) db graph_size nb_gen 
+k beta max_spread_step a b choose_spread name=
   let step i init= 
     let g = Graph.wattsStrogatzMatrix graph_size k beta in
     let prop_spread = Array.create max_spread_step 0.0 in
@@ -45,16 +47,19 @@ let process ?(max=99) db graph_size nb_gen k beta max_spread_step a b choose_spr
     let p = ref (-1.0) in
     while !j <= (max_spread_step-1) && prop_spread.(!j) != !p do
       prop_spread.(!j) <- 
-      (float_of_int (Spread.step_p g a b spread)) /. (float_of_int graph_size);
+      (float_of_int (Spread.step_p g a b spread)) 
+        /. (float_of_int graph_size);
       if !j > 0 then (p := prop_spread.(!j-1));
       incr j;
     done;
     {graph_no=i; prop_spread=prop_spread}
   in  
   let experiment init db= 
-    let exp_name = Printf.sprintf ("r_spreading_%s_%d_%d_%d_%d_%d_%d_%d_%d") 
+    let exp_name = Printf.sprintf 
+      ("r_spreading_%s_%d_%d_%d_%d_%d_%d_%d_%d") 
       name graph_size (int_of_float (beta*.100.0)) 
-      k nb_gen init max_spread_step (int_of_float a) (int_of_float b) in
+      k nb_gen init max_spread_step (int_of_float a) 
+        (int_of_float b) in
     print_endline ("Nom de l'expérience : "^exp_name);
     let cur_step = ref (match Experiment.get_experiment db exp_name
     with

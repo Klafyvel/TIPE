@@ -23,11 +23,14 @@ let () =
   let db = Experiment.load_db () in
   for b = 0 to 4 do
     ExperimentSpreading.process db graph_size nb_gen 50 
-      ((float_of_int b) *. 0.25) max_spread_step 1.0 1.0 choose_spread "random";
+      ((float_of_int b) *. 0.25) max_spread_step 1.0 1.0 
+      choose_spread "random";
     ExperimentSpreading.process db graph_size nb_gen 50 
-      ((float_of_int b) *. 0.25) max_spread_step 3.0 1.0 choose_spread "random";
+      ((float_of_int b) *. 0.25) max_spread_step 3.0 1.0 
+      choose_spread "random";
     ExperimentSpreading.process db graph_size nb_gen 50 
-      ((float_of_int b) *. 0.25) max_spread_step 1.0 3.0 choose_spread "random";
+      ((float_of_int b) *. 0.25) max_spread_step 1.0 3.0 
+      choose_spread "random";
   done;
   print_endline "Fermeture de la base de données.";
   if (Experiment.close_db db) then

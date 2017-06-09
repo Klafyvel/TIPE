@@ -2,6 +2,8 @@
 
 \usepackage{MyPack2}
 \usepackage[frenchkw]{algorithm2e}
+\usepackage{minted}
+\usepackage{forloop}
 % \usepackage{beamerthemeBerlin}
 \usetheme[hideothersubsections]{Hannover}
 \usecolortheme{whale}
@@ -12,6 +14,24 @@
 \setbeamercolor{block title}{fg=white,bg=blue}        % titre block normal 
 \setbeamercolor{block body}{fg=black,bg=blue!25}      % corps block normal
 \setbeamercolor{block body alerted}{fg=white,bg=red}   % idem pour un block alerte
+
+\newcounter{counterPrgm1}
+\newcounter{counterPrgm2}
+
+\newcommand\programme[4]{
+\setcounter{counterPrgm1}{1}
+\setcounter{counterPrgm2}{20}
+\section{#4}
+\forloop[20]{counterPrgm1}{1}{\value{counterPrgm1} < #3}{
+
+\begin{frame}
+
+  \inputminted[firstline=\arabic{counterPrgm1}, lastline=\arabic{counterPrgm2}, fontsize=\scriptsize, tabsize=2]{#2}{../../generationDeGraph/#1}
+  \addtocounter{counterPrgm2}{20}
+
+\end{frame}
+
+}}
 
 \newcommand{\resultat}[1]{
   \fontsize{8}{10}\selectfont
@@ -63,23 +83,21 @@
   \frametitle{Modélisation}
   On modélise un réseau social par un graphe.
   \begin{itemize}
-    \item<2-> Personne → Nœud
-    \item<3-> Lien social → Arête
+    \item Personne → Nœud
+    \item Lien social → Arête
   \end{itemize}
-  \uncover<4->{
     \begin{alertblock}{}
     \begin{center}
       On ne prend pas en compte la "qualité" de la relation.
     \end{center}
     \end{alertblock}
-  }
 \end{frame}
 \subsection{Caractéristiques des réseaux simulés}
 \begin{frame}
   \frametitle{Caractéristiques des réseaux simulés}
   \begin{itemize}
-    \item<2-> Stanley Milgram : Six degrés de séparation (Facebook 4.57)
-    \item<3-> Algorithme de Watts-Strogatz
+    \item Stanley Milgram : Six degrés de séparation (Facebook 4.57)
+    \item Algorithme de Watts-Strogatz
   \end{itemize}
 \end{frame}
 
@@ -87,16 +105,12 @@
 \begin{frame}
   \frametitle{Jeu de coordination}
   \begin{itemize}
-    \item<2-> Chaque nœud maximise son gain.
-    \item<3-> Un voisin dans l'état "informé" $\rightarrow$ gain $a$
-    \item<3-> Un voisin dans l'état "non-informé" $\rightarrow$ gain $b$
+    \item Chaque nœud maximise son gain.
+    \item Un voisin dans l'état "informé" $\rightarrow$ gain $a$
+    \item Un voisin dans l'état "non-informé" $\rightarrow$ gain $b$
   \end{itemize}
-  \visible<4->{
     Si on note $p$ la proportion de voisins informés, le nœud maximise son gain en passant à l'état informé si et seulement si $ p\times a > (1-p) \times b $, ou encore $$ p > \frac{b}{a+b}$$
-  }
-  \visible<5->{
     $\rightarrow$ On caractérise une rumeur par $q = \frac{b}{a+b}$.
-  }
 
 \end{frame}
 
@@ -106,9 +120,9 @@
   \begin{block}{Remarques}
     Soit un graphe $G = (V, E)$ avec $V$ un ensemble de nœuds et $E \subset V^2$.
     \begin{itemize}
-      \item<1-> Pas de propagation si $q>1$;
-      \item<2-> Si l'on pose $(V_k)_{k\in\N}$ une suite des nœuds dans l'état "informé" à l'étape $k$, s'il existe $n\in\N$ tel que $V_n = V_{n+1}$ alors la suite est stationnaire à partir du rang n;
-      \item<3-> La suite étant par ailleurs croissante pour l'inclusion et majorée, la suite converge et on finit une simulation en au plus $|V|$ étapes.
+      \item Pas de propagation si $q>1$;
+      \item Si l'on pose $(V_k)_{k\in\N}$ une suite des nœuds dans l'état "informé" à l'étape $k$, s'il existe $n\in\N$ tel que $V_n = V_{n+1}$ alors la suite est stationnaire à partir du rang n;
+      \item La suite étant par ailleurs croissante pour l'inclusion et majorée, la suite converge et on finit une simulation en au plus $|V|$ étapes.
     \end{itemize}
   \end{block}
 \end{frame}
@@ -134,17 +148,12 @@
 \begin{frame}
   \frametitle{Comment caractériser une propagation optimale ?}
   \begin{itemize}
-    \item<1-> Capacité à atteindre l'ensemble du graphe;
-    \item<2-> Nombre d'itérations de simulation le plus faible possible;
+    \item Capacité à atteindre l'ensemble du graphe;
+    \item Nombre d'itérations de simulation le plus faible possible;
   \end{itemize}
-  \uncover<3->{
     Problème(s) : Unicité de la solution ? identification des propriétés permettant une telle propagation ?
-  }
-  
-  \uncover<4->{
-  $\rightarrow$ Comparaison de critères arbitraires.
-  }
 
+  $\rightarrow$ Comparaison de critères arbitraires.
 \end{frame}
 
 \section{Génération de graphes}
@@ -167,32 +176,26 @@
 \begin{frame}
   \frametitle{Réseaux simulés}
   \begin{itemize}
-    \item<1-> 500 nœuds;
-    \item<2-> Au plus 500 étapes de simulation;
-    \item<3-> On lance la simulation 100 fois;
-    \item<4-> 3 paramètres à examiner ($\beta$, $q$, proportion initiale d'informés)
+    \item 500 nœuds;
+    \item Au plus 500 étapes de simulation;
+    \item On lance la simulation 100 fois;
+    \item 3 paramètres à examiner ($\beta$, $q$, proportion initiale d'informés)
   \end{itemize}
-  \uncover<5->{
-    $\rightarrow$ Stockage des résultats dans une base de donnée des résultats des calculs afin de pouvoir interrompre l'expérience à tout instant.
-  }
+  $\rightarrow$ Stockage des résultats dans une base de donnée des résultats des calculs afin de pouvoir interrompre l'expérience à tout instant.
 \end{frame}
 \section{Expériences}
 \subsection{Expérience 1}
 \begin{frame}
   \frametitle{Protocole expérimental}
   \begin{itemize}
-    \item<1->On fixe $K=50$;
-    \item<2->$\beta \in \{0,\frac{1}{4},\frac{1}{2},\frac{3}{4},1\}$;
-    \item<3->$q\in \{\frac{1}{4}, \frac{1}{2}, \frac{3}{4}\}$;
-    \item<4->proportion initiale de 1\% à 99\%;
+    \item On fixe $K=50$;
+    \item $\beta \in \{0,\frac{1}{4},\frac{1}{2},\frac{3}{4},1\}$;
+    \item $q\in \{\frac{1}{4}, \frac{1}{2}, \frac{3}{4}\}$;
+    \item proportion initiale de 1\% à 99\%;
   \end{itemize}
-  \uncover<5->{
   $\rightarrow$ 100 expériences de propagation en choisissant les éléments initiaux au hasard et stocker la propagation à chaque étape de la simulation.
 
-  }
-  \uncover<6->{
     But : pouvoir comparer les résultats des autres expériences, éventuellement fixer certains paramètres qui ont peu d'influence.
-  }
 \end{frame}
 
 \subsection{Courbes de propagation}
@@ -233,8 +236,8 @@
 \begin{frame}
   \frametitle{Remarques sur les résultats}
   \begin{itemize}
-    \item<1-> Le résultat pour $\beta=0$ est inexploitable;
-    \item<2-> On retrouve les mêmes effets qualitatifs de $\beta$ et $q$.
+    \item Le résultat pour $\beta=0$ est inexploitable;
+    \item On retrouve les mêmes effets qualitatifs de $\beta$ et $q$.
   \end{itemize}
 \end{frame}
 
@@ -252,8 +255,8 @@
 \begin{frame}
   \frametitle{Remarques sur les résultats}
   \begin{itemize}
-    \item<1-> Le résultat pour $\beta=0$ est inexploitable;
-    \item<2-> On retrouve les mêmes effets qualitatifs de $q$.
+    \item Le résultat pour $\beta=0$ est inexploitable;
+    \item On retrouve les mêmes effets qualitatifs de $q$.
   \end{itemize}
 \end{frame}
 
@@ -285,23 +288,23 @@
   \end{alertblock}
   Pour $\beta=\frac{1}{4}$,
   \begin{itemize}
-    \item<2-> Si $q \geq \frac{1}{2} \rightarrow \approx q$ des éléments de plus haut degré;
-    \item<3-> Si $q \leq \frac{1}{4} \rightarrow \approx 5\%$ des éléments de plus grande centralité;
-    \item<4-> Une étude plus quantitative serait nécessaire pour $\frac{1}{4} < q < \frac{1}{2}$.
+    \item Si $q \geq \frac{1}{2} \rightarrow \approx q$ des éléments de plus haut degré;
+    \item Si $q \leq \frac{1}{4} \rightarrow \approx 5\%$ des éléments de plus grande centralité;
+    \item Une étude plus quantitative serait nécessaire pour $\frac{1}{4} < q < \frac{1}{2}$.
   \end{itemize}
 \end{frame}
 \section{Conclusion}
 \begin{frame}
   \frametitle{Conclusion}
   \begin{itemize}
-    \item<1->On a un premier critère de choix des éléments initiaux 
+    \item On a un premier critère de choix des éléments initiaux 
     \begin{itemize}
-      \item<2->Nécessite d'être affiné
-      \item<3->Problème : longueur des calculs
+      \item Nécessite d'être affiné
+      \item Problème : longueur des calculs
     \end{itemize}
-    \item<4->Est-ce le meilleur critère ? (vérification difficile à cause de la longueur des calculs)
-    \item<5->Certains choix de modélisation sont discutables (Non "retour en arrière" de la rumeur)
-    \item<6->La méthode de génération des graphes est également problématique : degré des nœuds, choix de $\beta$ ?
+    \item Est-ce le meilleur critère ? (vérification difficile à cause de la longueur des calculs)
+    \item Certains choix de modélisation sont discutables (Non "retour en arrière" de la rumeur)
+    \item La méthode de génération des graphes est également problématique : degré des nœuds, choix de $\beta$ ?
   \end{itemize}
 \end{frame}
 
@@ -342,4 +345,14 @@
   \Retour{$M$}
   \end{algorithm}
 \end{frame}
+
+
+\programme{graph.ml}{ocaml}{114}{graph.ml}
+\programme{experiment.ml}{ocaml}{81}{experiment.ml}
+\programme{sortFirst.ml}{ocaml}{19}{sortFirst.ml}
+\programme{spread.ml}{ocaml}{28}{spread.ml}
+\programme{experimentSpreading.ml}{ocaml}{74}{experiment Spreading.ml}
+\programme{experimentSpreadingRandom.ml}{ocaml}{37}{experiment Spreading Random.ml}
+\programme{drawExperimentSpreadingRandomInitial.py}{python}{70}{draw Experiment Spreading Random Initial.py}
+
 \end{document}

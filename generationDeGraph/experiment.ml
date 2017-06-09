@@ -1,5 +1,6 @@
 (* Structure de la table experiments:
-CREATE TABLE "experiments" ("name" TEXT,"last_id" INT,"infos" TEXT DEFAULT (null))
+CREATE TABLE "experiments" 
+("name" TEXT,"last_id" INT,"infos" TEXT DEFAULT (null))
 *)
 
 let silent = true;;
@@ -41,8 +42,9 @@ let get_experiment db name =
   let create_table () =
     print_return ("Création de la table " ^ name) 
     (Sqlite3.exec db ("CREATE TABLE "^name^" (id INT, value TEXT);"));
-    print_return ("Enregistrement dans 'experiments' de la table " ^ name) (
-      Sqlite3.exec db ("INSERT INTO experiments VALUES (\""^name^"\", 0, \"\");"
+    print_return ("Enregistrement dans 'experiments' de la table " 
+    ^ name) (Sqlite3.exec db 
+    ("INSERT INTO experiments VALUES (\""^name^"\", 0, \"\");"
     ))
   in
   let get_last_result id =
@@ -60,7 +62,8 @@ let get_experiment db name =
 let add_step_id db exp id str =
   print_return (Printf.sprintf ("Ajout de l'étape %d à %s") id exp)
   (Sqlite3.exec db 
-    ("INSERT INTO "^exp^" VALUES ("^(string_of_int id)^",\""^str^"\");"))
+    ("INSERT INTO "^exp
+      ^" VALUES ("^(string_of_int id)^",\""^str^"\");"))
 ;;
 
 let change_last_id db exp id =

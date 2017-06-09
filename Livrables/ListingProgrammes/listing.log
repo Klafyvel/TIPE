@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Arch Linux) (preloaded format=xelatex 2017.5.7)  5 JUN 2017 11:14
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Arch Linux) (preloaded format=xelatex 2017.5.7)  9 JUN 2017 14:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1030,15 +1030,15 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 12.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2.
  [2] [3])
-(./_minted-listing/DD3E2969E3C4DE4026DBB0163D789CB027D8DB8D5F93F61C3FB79704976F
+(./_minted-listing/707BC14CBF6902F50051BEFEF5F53E3927D8DB8D5F93F61C3FB79704976F
 65C1.pygtex [4] [5])
 (./_minted-listing/D931C162BE8AA454006426C2FD2018947B56B2ADB8D0EC0B5130930A4268
 F9E9.pygtex)
 (./_minted-listing/09337454B7D11EAAC521B2566AC39908F8636BFEDC092DD4AC4345F954D4
 9999.pygtex [6])
-(./_minted-listing/FF2432B1E7579D60C571A3CA3D2A4921BA68A20B6284AFDEBB2DEBFD0904
+(./_minted-listing/ABA6D929CEECCD4CA9F72082E4C0CD98BA68A20B6284AFDEBB2DEBFD0904
 C9AE.pygtex [7])
-(./_minted-listing/6C6E41B07D1934578CE91759A9F99F3CCB4DA94A46666BC616EB86A3D062
+(./_minted-listing/095ACD9BE73182A10D3A723F693E6628CB4DA94A46666BC616EB86A3D062
 0700.pygtex [8])
 (./_minted-listing/4E2EB1B976D6936A102BAF355B48707727C3587EDF47CE7B0F6620977EB0
 8221.pygtex [9])
@@ -1046,25 +1046,25 @@ C9AE.pygtex [7])
 7F7B.pygtex [10])
 (./_minted-listing/9C112ADE6DB89E838F7000513539BCBE669509CE7147F315AC1A817E0F5E
 3EA2.pygtex)
-(./_minted-listing/E259F049ED37FCC2CDBE706C71024FA0A8103F354601269DCC1583E2644E
+(./_minted-listing/094B567B6C9DE4C44DD2322D99302178A8103F354601269DCC1583E2644E
 519C.pygtex [11] [12])
 (./_minted-listing/AEBBD1B963A504CDEDEC063E8D06491927AAECC565FD798180412E305360
 FD19.pygtex [13])
 (./_minted-listing/36C0A95B9D0CBF4797B62E2291C9D8C598C15BAE6F31F3D72C5EA69F2C57
 10FF.pygtex [14] [15])
 (./_minted-listing/08820728AC634469297844490E0FC39C59626899B5B526044EC2F9667985
-4279.pygtex [16]) [17] (./listing.aux) )
+4279.pygtex [16] [17]) [18] (./listing.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 18926 strings out of 493068
- 374015 string characters out of 6141029
- 508068 words of memory out of 5000000
- 22591 multiletter control sequences out of 15000+600000
+ 18927 strings out of 493068
+ 374037 string characters out of 6141029
+ 508079 words of memory out of 5000000
+ 22592 multiletter control sequences out of 15000+600000
  8993 words of font info for 47 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 43i,11n,45p,10411b,5774s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,11n,45p,10411b,5781s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on listing.pdf (17 pages).
+Output written on listing.pdf (18 pages).
